@@ -1,0 +1,167 @@
+#labels queries,bigdata,benchmark,bigrdfbench
+#This page contains the description of our benchmark queries.
+
+= Introduction =
+
+This page contains the description of our benchmark queries
+
+
+= Details =
+
+############################### B1 ######################################
+Description: Get Methylation, Exon and Gene values for TCGA patient no. TCGA-TQ-A7RV.
+
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+SELECT  ?methylationValue  ?exonValue ?geneValue
+WHERE
+{
+    ?s	tcga:bcr_patient_barcode	<http://tcga.deri.ie/TCGA-TQ-A7RV>.  
+    <http://tcga.deri.ie/TCGA-TQ-A7RV>	tcga:result	?results. 
+	{
+    ?results tcga:beta_value ?methylationValue. 
+	}
+UNION
+  {
+  ?results  tcga:RPKM ?exonValue.
+  }
+UNION
+  {
+  ?results  tcga:scaled_estimate ?geneValue.
+  }
+
+}
+############################### B2 ######################################
+Description: Get the tumor type and Exon values for all the patient having lung cancer and tumor weight less than 100
+
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT   ?patient ?tumorType ?RPKM
+WHERE
+{
+?s tcga:bcr_patient_barcode ?patient.
+?patient tcga:disease_acronym <http://tcga.deri.ie/lusc>.
+?patient tcga:tumor_weight ?weight.
+?patient tcga:tumor_type ?tumorType. 
+?patient tcga:result ?results.
+?results tcga:RPKM  ?RPKM.
+FILTER(xsd:integer(?weight) < 100)
+}
+############################### B3 ######################################
+Description: Get the methylation values for all the patients who have been treated drug "Temodar" and they died while at initial pathologic disgnosis age of less than 45. 
+
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT  ?patient ?methylationValue
+WHERE
+{
+?s tcga:bcr_patient_barcode ?patient.
+?patient <http://tcga.deri.ie/schema/vital_status> "Dead".
+?patient tcga:bcr_drug_barcode ?drug.
+?drug tcga:drug_name "Temodar".
+?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age.
+?patient tcga:result ?results.
+?results  tcga:beta_value ?methylationValue.
+FILTER(xsd:integer(?age) <45)
+}
+############################### B4 ######################################
+Description: Get the expression values for all the patients either belong to Brazil or Vietnam
+
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+SELECT    ?expressionValues
+WHERE
+{
+?s tcga:bcr_patient_barcode ?patient.
+?patient dbpedia:country ?country.
+?patient tcga:result ?results.
+{
+?results  tcga:reads_per_million_miRNA_mapped ?expressionValues.
+}
+UNION
+{
+?results tcga:RPKM ?expressionValues.
+}
+FILTER REGEX(str(?country),"Brazil|Vietnam", "i")
+}
+############################### B5 ######################################
+Description: Get the methylation values for CNTNAP2 gene of all the cancer patients
+Results: 9075
+PREFIX tcga: <http://tcga.deri.ie/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX affymetrix: <http://bio2rdf.org/affymetrix_vocabulary:>
+SELECT  ?methylationCNTNAP2   
+WHERE 
+{
+ ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:CNTNAP2>.
+ ?s affymetrix:x-geneid ?geneId.
+ ?geneId rdf:type tcga:expression_gene_lookup.
+ ?geneId tcga:chromosome ?chromosome. 
+ ?geneId tcga:start ?start.
+ ?geneId tcga:stop  ?stop. 
+ ?uri tcga:bcr_patient_barcode ?patient .
+ ?patient tcga:result ?recordNo .
+ ?recordNo tcga:chromosome   ?chromosome.
+ ?recordNo tcga:position     ?position.
+ ?recordNo tcga:beta_value  ?methylationCNTNAP2.
+ FILTER (xsd:integer(?position) >= xsd:integer(?start) && xsd:integer(?position) xsd:integer(?stop) )
+}
+############################### B6 ######################################
+Description: For all cancer patients, get the genomic locations and corresponding gene expression values for chromosome associated with KRAS gene.
+Results: 1092833
+PREFIX tcga: <http://tcga.deri.ie/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT   ?patient ?start ?stop ?geneExpVal
+WHERE 
+{
+ ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:KRAS>.
+ ?s affymetrix:x-geneid ?geneId.
+ ?geneId rdf:type tcga:expression_gene_lookup.
+ ?geneId tcga:chromosome ?chromosome.
+ ?uri tcga:bcr_patient_barcode ?patient .
+ ?patient tcga:result ?recordNo .
+ ?recordNo tcga:chromosome   ?chromosome.
+ ?recordNo tcga:start ?start.
+ ?recordNo tcga:stop ?stop.
+ ?recordNo tcga:scaled_estimate ?geneExpVal
+}
+############################### B7 ######################################
+Description: Find the clinical drug information for all the patients belonging to those countries with population density greater than 32. 
+Results: 
+
+PREFIX tcga: <http://tcga.deri.ie/schema/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?patient ?p ?o
+WHERE
+{
+?uri tcga:bcr_patient_barcode ?patient .
+?patient dbpedia:country ?country.
+?country dbpedia:populationDensity ?popDensity.
+?patient tcga:bcr_drug_barcode ?drug.
+?drug ?p ?o.
+FILTER(xsd:integer(?popDensity)>=32)
+}
+############################### B8 ######################################
+Description: Get the outliers expression values for TCGA patient TCGA-D9-A1X3
+Results:306705
+
+PREFIX tcga: <http://tcga.deri.ie/schema/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT  ?chromosome ?expressionValue
+WHERE
+{
+?uri tcga:bcr_patient_barcode <http://tcga.deri.ie/TCGA-D9-A1X3> .
+<http://tcga.deri.ie/TCGA-D9-A1X3> tcga:result ?recordNo .
+?recordNo tcga:chromosome   ?chromosome.
+{
+?recordNo tcga:protein_expression_value ?expressionValue.
+}
+UNION
+{
+?recordNo tcga:beta_value ?expressionValue.
+}
+FILTER (xsd:decimal(?expressionValue) > 0.05)
+}
