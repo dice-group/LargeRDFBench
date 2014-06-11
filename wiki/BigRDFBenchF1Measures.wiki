@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+This page provides details about how one can use the [ BigRDFBench Java Tool] to calculate F1 scores for a qiven SPARQL query. The main aim of this tool is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given BigRDFBench query.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
