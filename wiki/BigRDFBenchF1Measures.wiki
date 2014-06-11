@@ -1,4 +1,3 @@
-#A description of how to calculate precision, recall, and F1 scores.
 This page provides details about how one can use the [ BigRDFBench Java Tool] to calculate F1 scores for a qiven SPARQL query. The main aim of this tool is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given BigRDFBench query.
 
 = Introduction =
