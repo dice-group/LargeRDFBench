@@ -1,0 +1,24 @@
+Startup files information. 
+
+----------FedX-original-----------------------
+package : package org.aksw.simba.start;
+File:QueryEvaluation.java
+
+----------FedX-HiBISCuS-----------------------
+package : package org.aksw.simba.fedsum.startup;
+File:QueryEvaluation.java
+
+----------SPLENDID-original-----------------------
+package : package de.uni_koblenz.west.evaluation;
+File:QueryProcessingEval.java
+
+----------SPLENDID-HiBISCuS-----------------------
+package : package de.uni_koblenz.west.evaluation;
+File:QueryProcessingEval.java
+
+----------ANAPSID-----------------------
+Follow the instructions given at https://github.com/anapsid/anapsid to configure the system 
+and then use anapsid/ivan-scripts/runQuery.sh to run a query
+
+----------BigRDFBench-F1Scores-----------------------
+Please refer to wiki page https://code.google.com/p/bigrdfbench/wiki/BigRDFBenchF1Measures for usage. 
