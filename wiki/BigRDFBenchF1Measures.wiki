@@ -33,4 +33,8 @@ Precision: 1.0, Recall: 1.0, F1: 1.0
 === Using with any other Benchamrk===
 In order to use with other bechmarks, the following extra steps are required:
  * Store all of the benchmark queries in directory with one file per query.
-* Store the corresponding actual results of queries in another directory with one file per query results in tabular format (See sample [https://drive.google.com/file/d/0BzemFAUFXpqOMVJTV2ZoT2Q3U0U/edit?usp=sharing here] for both steps) 
+ * Store the corresponding actual results of queries in another directory with one file per query results in tabular format (See sample [https://drive.google.com/file/d/0BzemFAUFXpqOMVJTV2ZoT2Q3U0U/edit?usp=sharing here] for both steps) 
+ * Convert the query results into RDF NTripples by calling the function ResultsRDFizer.generateRDFResults(String queriesLocation, String resultsLocation, String outputLocation). The output file name will be results.nt
+ * Repeat BigRDFBench steps explained above.
+
+It is important to note that this tool is still at an early stage and yet not properly tested. Further more, it is highly sensitive to character encoding (UTF-8 is used). 
