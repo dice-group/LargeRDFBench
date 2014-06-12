@@ -10,12 +10,11 @@ This page provides details about how one can use the BigRDFBench Java Tool to ca
 
 A sample code is given below. 
 
-String S2 = "SELECT ?party ?page  WHERE {    //cd2
- <http://dbpedia.org/resource/Barack_Obama> 
+String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_Obama> 
 <http://dbpedia.org/ontology/party> ?party .
 ?x <http://data.nytimes.com/elements/topicPage> ?page .
-?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
-			}";
+?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .}";
+			
 
 String results = "D:/BigRDFBench/completeness_correctness/results.nt";
 
