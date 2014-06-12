@@ -8,7 +8,7 @@ This page provides details about how one can use the BigRDFBench Java Tool to ca
  * You can compute the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
  * You can retrieve the results missed by federation engine by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
 
-A sample code is given below. 
+A sample code (obtained from FedX) is given below. 
 
 String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_Obama> 
 <http://dbpedia.org/ontology/party> ?party .
