@@ -30,5 +30,5 @@ A sample output is given below.
 
 Precision: 1.0, Recall: 1.0, F1: 1.0
 
-=== Using with Other Benchamrks in Future===
+=== Using with any other Benchamrk===
 In order to use with other bechmarks, the following extra steps are required:
