@@ -1,4 +1,4 @@
-This page provides details about how one can use the BigRDFBench java tool(BigRDFBench-F1_Measure.jar) to calculate Precision, Recall, and F1 scores for a qiven SPARQL query. The main aim of this tool is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given SPARQL query. First, we explain how this tool can be used with BigRDFBench, followed by the details how one can use it for any other benchmark. 
+This page provides details about how one can use the BigRDFBench java tool (BigRDFBench-F1_Measure.jar) to calculate Precision, Recall, and F1 scores for a qiven SPARQL query. The main aim of this tool is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given SPARQL query. First, we explain how this tool can be used with BigRDFBench, followed by the details how one can use it for any other benchmark. 
 
  === Using with BigRDFBench ===
 
