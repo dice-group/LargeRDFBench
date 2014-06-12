@@ -13,7 +13,11 @@ import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.RepositoryException;
 
 import com.google.common.collect.Sets;
-
+/**
+ * Precision, Recall, and F1 generator
+ * @author Saleem
+ *
+ */
 public class StatsGenerator {
 
 
@@ -24,10 +28,17 @@ public class StatsGenerator {
 //         ResultsLoader.loadResults(results);
 //         getActualResults("S1");
 	}
-
+/**
+ * Get Precison, Recall, and F1 Score for the given query results
+ * @param queryNo Query number for which the scores are required to be computed e.g. S1, B1 , C1 etc.
+ * @param res ResultSet Iterator
+ * @return Fscores Precision, Recall, and F1 scores
+ * @throws QueryEvaluationException
+ * @throws RepositoryException
+ * @throws MalformedQueryException
+ */
 	public static String getFscores(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException 
 	{
-		
 		String Fscores = "" ;
 		double precision, recall,F1;
 		Set<String> curResults =  getCurrentResult(res) ;
@@ -45,23 +56,22 @@ public class StatsGenerator {
 		return Fscores;
 		
 	}
+	/**
+	 * Get the list of missing results (if any) the query execution
+	* @param queryNo Query number for which the scores are required to be computed e.g. S1, B1 , C1 etc.
+	* @param res ResultSet Iterator
+	* @return Fscores Precision, Recall, and F1 scores
+	* @throws QueryEvaluationException
+	* @throws RepositoryException
+	* @throws MalformedQueryException
+	 */
 	public static Set<String> getMissingResults(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException 
 	{
-		
-//		String Fscores = "" ;
-//		double precision, recall,F1;
 		Set<String> curResults =  getCurrentResult(res) ;
 		//System.out.println("current:"+ curResults);
 		Set<String> actualResults = getActualResults(queryNo) ;
 		//System.out.println("actual:" +actualResults);
 		Set<String> diffSet = Sets.difference(actualResults, curResults);
-		//System.out.println(diffSet);
-		//System.out.println(Sets.difference( curResults,actualResults));
-//		double correctResults = actualResults.size()-diffSet.size();
-//		precision = (correctResults/curResults.size());
-//		recall = correctResults/actualResults.size();
-//		F1 = 2*(precision*recall)/(precision+recall);
-//		Fscores = "Precision: "+precision+", Recall: " + recall +", F1: "+F1;
 		return diffSet;
 		
 	}
@@ -78,6 +88,12 @@ public class StatsGenerator {
 //		return precision;
 //		
 //	}
+	/**
+	 * Get the current results of the query execution
+	 * @param res ResultSet iterator
+	 * @return curResults List of results
+	 * @throws QueryEvaluationException
+	 */
 	private static Set<String> getCurrentResult(TupleQueryResult res) throws QueryEvaluationException 
 	{
 		List<String> bindingNames = res.getBindingNames();
@@ -93,13 +109,20 @@ public class StatsGenerator {
 				recordLine = recordLine+bindingName+"="+bindingVal+";";
 				else
 					recordLine = recordLine+bindingName+"="+bindingVal;	
-				
 			}
 			curResults.add("["+recordLine+"]");
 			}
 
 		return curResults;
 	}
+	/**
+	 * Get the actual result of the given query
+	 * @param queryName Name of the query e.g. S1, B1 , C1 etc. 
+	 * @return actualResults List of actual results
+	 * @throws RepositoryException
+	 * @throws MalformedQueryException
+	 * @throws QueryEvaluationException
+	 */
 
 	private static Set<String> getActualResults(String queryName) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 		Set<String> actualResults = new HashSet<String>() ;
@@ -113,8 +136,8 @@ public class StatsGenerator {
 				+ "			<http://aksw.org/bigrdfbench/query/"+queryName+"> bigrdfbench:bindingValues ?values\n"
 				+ "			}";
 		 
-	 	    TupleQuery tupleQuery = ResultsLoader.con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-	 		 TupleQueryResult res = tupleQuery.evaluate();
+	 	      TupleQuery tupleQuery = ResultsLoader.con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+	 		  TupleQueryResult res = tupleQuery.evaluate();
 	 		   while(res.hasNext())
 	 		   {
 	 			  BindingSet result = res.next();

@@ -10,9 +10,17 @@ import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFParseException;
 import org.openrdf.sail.memory.MemoryStore;
-
+/**
+ * Load RDF results into in-memory index
+ * @author Saleem
+ *
+ */
 public class ResultsLoader {
 	public static  RepositoryConnection con = null;
+	/**
+	 * Load RDF results into in-memory
+	 * @param RDFresultsFile RDF results file
+	 */
 	public static void loadResults(String RDFresultsFile) {
 		File curfile = new File ("memorystore.data");
 		curfile.delete();
