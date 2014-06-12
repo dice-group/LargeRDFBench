@@ -37,4 +37,4 @@ In order to use with other bechmarks, the following extra steps are required:
  * Convert the query results into RDF NTripples by calling the function ResultsRDFizer.generateRDFResults(String queriesLocation, String resultsLocation, String outputLocation). The output file name will be results.nt
  * Repeat BigRDFBench steps explained above.
 
-It is important to note that this tool is still at an early stage and yet not properly tested. Further more, it is highly sensitive to character encoding (UTF-8 is used). 
+It is important to note that this tool is still at an early stage and yet not properly tested. Further more, it is highly sensitive to character encoding (UTF-8 is used). Further, it is important to note that Precision and F1 scores are not valid if SPARQL LIMIT clause is used in the query. This is because the results comes in random other until the specified LIMIT is reached. 
