@@ -3,7 +3,7 @@ This page provides details about how one can use the BigRDFBench Java Tool to ca
  === Using with BigRDFBench ===
 
  * Download the Java [https://drive.google.com/file/d/0BzemFAUFXpqOX20tSUFhWUplalU/edit?usp=sharing BigRDFBench-F1_Measure.jar] and include into the underlying federation engine references libraries. 
- * Download the BigRDFBench acutal [https://drive.google.com/file/d/0BzemFAUFXpqOMWlMRFNyT3lzSTQ/edit?usp=sharing results] (NTripples) file and store it into a directory say "C://BigRDFBech/results".
+ * Download the BigRDFBench actual [https://drive.google.com/file/d/0BzemFAUFXpqOMWlMRFNyT3lzSTQ/edit?usp=sharing results] (NTripples) file and store it into a directory say "C://BigRDFBech/results".
  * Load the above results.nt file into in-memory sesame index by calling the  ResultsLoader.loadResults(ResultsFileLocation) function. This is one time process and you dont  need to load again and again. 
  * Retrieved the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
 
