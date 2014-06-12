@@ -45,6 +45,26 @@ public class StatsGenerator {
 		return Fscores;
 		
 	}
+	public static Set<String> getMissingResults(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException 
+	{
+		
+//		String Fscores = "" ;
+//		double precision, recall,F1;
+		Set<String> curResults =  getCurrentResult(res) ;
+		//System.out.println("current:"+ curResults);
+		Set<String> actualResults = getActualResults(queryNo) ;
+		//System.out.println("actual:" +actualResults);
+		Set<String> diffSet = Sets.difference(actualResults, curResults);
+		//System.out.println(diffSet);
+		//System.out.println(Sets.difference( curResults,actualResults));
+//		double correctResults = actualResults.size()-diffSet.size();
+//		precision = (correctResults/curResults.size());
+//		recall = correctResults/actualResults.size();
+//		F1 = 2*(precision*recall)/(precision+recall);
+//		Fscores = "Precision: "+precision+", Recall: " + recall +", F1: "+F1;
+		return diffSet;
+		
+	}
 //	public static float getPrecision(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException 
 //	{
 //		
