@@ -2,26 +2,24 @@ This page provides details about how one can use the [ BigRDFBench Java Tool] to
 
  * Download the Java [https://drive.google.com/file/d/0BzemFAUFXpqOX20tSUFhWUplalU/edit?usp=sharing BigRDFBench-F1_Measure.jar] and include into the underlying federation engine references libraries. 
  * Download the BigRDFBench acutal [https://drive.google.com/file/d/0BzemFAUFXpqOMWlMRFNyT3lzSTQ/edit?usp=sharing results] (NTripples) file and store it into a directory say "C://BigRDFBech/results".
- * Load the above results.nt file into in-memory sesame index by calling the  ResultsLoader.loadResults(<ResultsFileLocation>) function. This is one time process and you dont  need to load again and again. 
- * Retrieved the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(<BigRDFBenchQueryNo>, <QueryResultSetIterator>). 
+ * Load the above results.nt file into in-memory sesame index by calling the  ResultsLoader.loadResults(ResultsFileLocation) function. This is one time process and you dont  need to load again and again. 
+ * Retrieved the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
 
 A sample code is given below. 
 
-String S2 = "SELECT ?party ?page  WHERE { " +   //cd2
-  
-" <http://dbpedia.org/resource/Barack_Obama> 
-<http://dbpedia.org/ontology/party> ?party ." +
+String S2 = "SELECT ?party ?page  WHERE {    //cd2
+ <http://dbpedia.org/resource/Barack_Obama> 
+<http://dbpedia.org/ontology/party> ?party .
+?x <http://data.nytimes.com/elements/topicPage> ?page .
+?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .
+			}";
 
-" ?x <http://data.nytimes.com/elements/topicPage> ?page ." +
-
-"   ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> ."+
-			"}";
 String results = "D:/BigRDFBench/completeness_correctness/results.nt";
 
 ResultsLoader.loadResults(results);
 
 TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, S2); 
 
- TupleQueryResult res = query.evaluate();
+TupleQueryResult res = query.evaluate();
 
-  System.out.println(StatsGenerator.getFscores("S2", res));
+System.out.println(StatsGenerator.getFscores("S2", res));
