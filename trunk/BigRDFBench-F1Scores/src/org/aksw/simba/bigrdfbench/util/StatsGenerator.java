@@ -1,5 +1,6 @@
 package org.aksw.simba.bigrdfbench.util;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -36,8 +37,9 @@ public class StatsGenerator {
  * @throws QueryEvaluationException
  * @throws RepositoryException
  * @throws MalformedQueryException
+ * @throws UnsupportedEncodingException 
  */
-	public static String getFscores(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException 
+	public static String getFscores(String queryNo,TupleQueryResult res) throws QueryEvaluationException, RepositoryException, MalformedQueryException, UnsupportedEncodingException 
 	{
 		String Fscores = "" ;
 		double precision, recall,F1;
@@ -46,8 +48,11 @@ public class StatsGenerator {
 		Set<String> actualResults = getActualResults(queryNo) ;
 		//System.out.println("actual:" +actualResults);
 		Set<String> diffSet = Sets.difference(actualResults, curResults);
-		//System.out.println(diffSet);
-		//System.out.println(Sets.difference( curResults,actualResults));
+		//Set<String> diff = differenceSet(actualResults, curResults);
+		//System.out.println(diff.size());
+		//System.out.println(diffSet.size());
+		//System.out.println("Actual-Cur: "+ diffSet);
+		//System.out.println("Cur-Actual: "+Sets.difference( curResults,actualResults));
 		double correctResults = actualResults.size()-diffSet.size();
 		precision = (correctResults/curResults.size());
 		recall = correctResults/actualResults.size();
@@ -56,6 +61,24 @@ public class StatsGenerator {
 		return Fscores;
 		
 	}
+//	/**
+//	 * Calculate difference set of two sets
+//	 * @param actualResults Set A
+//	 * @param curResults Set B
+//	 * @return diffSet Difference set of A and B
+//	 * @throws UnsupportedEncodingException 
+//	 */
+//	public static Set<String> differenceSet(Set<String> actualResults,
+//		Set<String> curResults) throws UnsupportedEncodingException {
+//		Set<String> diffSet = new HashSet<String>();
+//		for(String e:actualResults)
+//		{
+//			//e = new String(e.getBytes("UTF-8"), "UTF-8");
+//			if(!curResults.contains(e))
+//				diffSet.add(e);
+//		}
+//	return diffSet;
+//}
 	/**
 	 * Get the list of missing results (if any) the query execution
 	* @param queryNo Query number for which the scores are required to be computed e.g. S1, B1 , C1 etc.
@@ -104,11 +127,21 @@ public class StatsGenerator {
 			for(int i = 0 ; i < bindingNames.size(); i++)
 			{
 				String bindingName = bindingNames.get(i);
-				String bindingVal = result.getBinding(bindingName).getValue().toString().replaceAll("\n", " ").replace("]", "").replace("[", "");
+				try{
+				String bindingVal = result.getBinding(bindingName).getValue().toString().replace("'", "\"").replaceAll("\n", " ").replace("]", "").replace("[", "");
+				byte ptext[] = bindingVal.getBytes();
+				bindingVal = new String(ptext, "UTF-8");
 				if(i< bindingNames.size()-1)					
-				recordLine = recordLine+bindingName+"="+bindingVal+";";
+				recordLine = recordLine+bindingName+"="+bindingVal+"<===>";
 				else
 					recordLine = recordLine+bindingName+"="+bindingVal;	
+				} catch (Exception e){
+					String bindingVal ="\"null\"";
+					if(i< bindingNames.size()-1)					
+						recordLine = recordLine+bindingName+"="+bindingVal+"<===>";
+						else
+							recordLine = recordLine+bindingName+"="+bindingVal;	
+					}
 			}
 			curResults.add("["+recordLine+"]");
 			}
@@ -141,13 +174,13 @@ public class StatsGenerator {
 	 		   while(res.hasNext())
 	 		   {
 	 			  BindingSet result = res.next();
-	 		     String[] bindingNames =  result.getValue("names").stringValue().replace("'", "\"").replace("[", "").replace("]", "").split(";");
-	 		     String[] bindingValues =  result.getValue("values").stringValue().replace("'", "\"").replace("[", "").replace("]", "").split(";");
+	 		     String[] bindingNames =  result.getValue("names").stringValue().replace("\n", " ").replace("'", "\"").replace("[", "").replace("]", "").split("<===>");
+	 		     String[] bindingValues =  result.getValue("values").stringValue().replace("\n", " ").replace("'", "\"").replace("[", "").replace("]", "").split("<===>");
 	 		     String actualResult = "[";
 	 		     for(int i=0 ; i < bindingNames.length;i++)
 	 		     {
 	 		    	if(i<bindingNames.length-1)
-	 		    	 actualResult= actualResult+bindingNames[i]+"="+bindingValues[i]+";";
+	 		    	 actualResult= actualResult+bindingNames[i]+"="+bindingValues[i]+"<===>";
 	 		    	else
 	 		    		actualResult= actualResult+bindingNames[i]+"="+bindingValues[i]+"]";
 	 		     }
