@@ -16,7 +16,7 @@ String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_O
 ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .}";
 			
 
-String results = "D:/BigRDFBench/completeness_correctness/results.nt";
+String results = "D:/BigRDFBench/completeness_correctness/results.nt"; //Location of the results.nt file
 
 ResultsLoader.loadResults(results);
 
