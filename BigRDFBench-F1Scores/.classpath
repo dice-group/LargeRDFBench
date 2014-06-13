@@ -8,8 +8,8 @@
 	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/guava-14.0.1.jar"/>
 	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/openrdf-sesame-2.6.5-onejar.jar"/>
 	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/slf4j-api-1.5.2.jar"/>
 	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/slf4j-log4j12-1.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/BigRDFBench-F1Scores/lib/openrdf-sesame-2.6.5-onejar.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
