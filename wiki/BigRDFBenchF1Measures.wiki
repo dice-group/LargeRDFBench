@@ -6,7 +6,7 @@ This page provides details about how one can use the BigRDFBench java tool (BigR
  * Download the BigRDFBench actual [https://drive.google.com/file/d/0BzemFAUFXpqOMWlMRFNyT3lzSTQ/edit?usp=sharing results] (NTripples) file and store it into a directory.
  * Load the above results.nt file into in-memory sesame index by calling the  ResultsLoader.loadResults(ResultsFileLocation) function. This is one time process and you dont  need to load every time you run a query. 
  * You can compute the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
- * You can retrieve the results missed by federation engine by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
+ * You can retrieve the results missed by federation engine (if any) by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
 
 A sample code (FedX based) is given below. 
 
