@@ -32,9 +32,9 @@ Precision: 1.0, Recall: 1.0, F1: 1.0
 
 === Using with any other Benchamrk===
 In order to use with other bechmarks, the following extra steps are required:
- * Store all of the benchmark queries in a directory with one file per query.
- * Store the corresponding actual results of queries into another directory with one file per query results in tabular format (See sample [https://drive.google.com/file/d/0BzemFAUFXpqOUi1fVGZnOTdHS2s/edit?usp=sharing here] for both steps) 
- * Convert the query results into RDF NTripples by calling the function ResultsRDFizer.generateRDFResults(String queriesLocation, String resultsLocation, String outputLocation). The output file name will be results.nt
+ * Store all of the benchmark queries in a directory with one file (.csv only) per query.
+ * Store the corresponding actual results of queries into another directory with one file(.csv only) per query results in tabular format. The results must be separated by some unique character(s)(lets call it ResultSeparator. You may download sample query and results files from [https://drive.google.com/file/d/0BzemFAUFXpqOUi1fVGZnOTdHS2s/edit?usp=sharing here].  
+ * Convert the query results into RDF NTripples by calling the function ResultsRDFizer.generateRDFResults(String queriesLocation, String resultsLocation, String outputLocation, String ResultSeparator). The output file name will be results.n3
  * Repeat BigRDFBench steps explained above.
 
 It is important to note that this tool is still at an early stage and yet not properly tested. Further more, it is highly sensitive to character encoding (UTF-8 is used). It is also important to note that Precision and F1 scores are not valid if SPARQL LIMIT clause is used in the query. This is because the results comes in random order until the specified LIMIT is reached. 
