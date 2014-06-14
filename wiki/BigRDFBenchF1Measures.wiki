@@ -30,6 +30,8 @@ A sample output is given below.
 
 Precision: 1.0, Recall: 1.0, F1: 1.0
 
+*The above steps also applied to [https://code.google.com/p/fbench/ FedBench] federation benchmark. 
+
 === Using with any other Benchamrk===
 In order to use with other bechmarks, the following extra steps are required:
  * Store all of the benchmark queries in a directory with one file (.csv only) per query.
