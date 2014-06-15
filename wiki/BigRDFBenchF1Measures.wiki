@@ -9,13 +9,13 @@ This page provides details about how one can use the BigRDFBench java tool (BigR
  * You can retrieve the results missed by federation engine (if any) by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
 
 A sample code (FedX based) for retrieving the Precision, Recall and F1 scores of BigRDFBench query no S2 is given below. 
-
+			
+{{{
 String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_Obama> 
 <http://dbpedia.org/ontology/party> ?party .
 ?x <http://data.nytimes.com/elements/topicPage> ?page .
 ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .}";
-			
-{{{
+
 String results = "D:/BigRDFBench/completeness_correctness/results.nt"; //Location of the results.nt file
 
 ResultsLoader.loadResults(results);
