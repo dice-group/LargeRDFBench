@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+
+import org.apache.commons.io.FilenameUtils;
 /**
  * Make an RDF version of the results of queries given in text files
  * @author Saleem
@@ -29,7 +31,7 @@ public class ResultsRDFizer{
 public static void generateRDFResults(String queriesLocation, String resultsLocation, String outputLocation, String resultSeparator) throws IOException
  {
 	// bw = new BufferedWriter(new FileWriter(new File(outputLocation+"results.nt")));
-	  File outputFile =new File(outputLocation+"results.n3");
+	  File outputFile =new File(outputLocation+"results1.n3");
 	  bw = new BufferedWriter (new OutputStreamWriter(new FileOutputStream(outputFile),"UTF-8"));
 	//  bw = new BufferedWriter(new FileWriter(new File(outputLocation+"results.txt")));
 	  bw.write("@prefix bigrdfbench:<http://bigrdfbench.aksw.org/schema/> . ");
@@ -58,13 +60,15 @@ public static void generateRDFResults(String queriesLocation, String resultsLoca
 	{
 		
 		String queryString = getQueryString(queryFile.getCanonicalPath().toString());
-    	String queryName = queryFile.getName().replace(".csv", "");
+		String queryName = FilenameUtils.getBaseName(queryFile.getName()) ;
+		String queryExtension = FilenameUtils.getExtension(queryFile.getName());
+		//System.out.println("extension:"+FilenameUtils.getExtension(queryFile.getName()) );
     	bw.newLine();
     	bw.write("<http://aksw.org/bigrdfbench/resource/"+queryName+"> bigrdfbench:queryName <http://aksw.org/bigrdfbench/query/"+queryName+"> .");
     	bw.newLine();
     	bw.write("<http://aksw.org/bigrdfbench/query/"+queryName+"> bigrdfbench:queryString \""+queryString.replace("\"", "'") +"\" .");
     	//System.out.println(queryString);
-    	File file = new File(resultsLocation+queryName+".csv");
+    	File file = new File(resultsLocation+queryName+"."+queryExtension );
     	BufferedReader br  = new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"));
     	//System.out.println(br.readLine());
   	    String[] bindingNames = br.readLine().split(resultSeparator);
