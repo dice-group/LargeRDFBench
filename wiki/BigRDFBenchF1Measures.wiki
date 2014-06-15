@@ -15,7 +15,7 @@ String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_O
 ?x <http://data.nytimes.com/elements/topicPage> ?page .
 ?x <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Barack_Obama> .}";
 			
-
+{{{
 String results = "D:/BigRDFBench/completeness_correctness/results.nt"; //Location of the results.nt file
 
 ResultsLoader.loadResults(results);
@@ -25,6 +25,7 @@ TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, 
 TupleQueryResult res = query.evaluate();
 
 System.out.println(StatsGenerator.getFscores("S2", res));
+}}}
 
 A sample output is given below. 
 
