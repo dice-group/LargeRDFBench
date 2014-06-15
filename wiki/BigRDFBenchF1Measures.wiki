@@ -2,11 +2,11 @@ This page provides details about how one can use the BigRDFBench java tool (BigR
 
  === Using with BigRDFBench ===
 
- * Download the Java [https://drive.google.com/file/d/0BzemFAUFXpqOZHBHNjZyLVA3WE0/edit?usp=sharing BigRDFBench-F1_Measure.jar] and include into the underlying federation engine jar libraries. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
- * Download the BigRDFBench actual [https://drive.google.com/file/d/0BzemFAUFXpqOM2xnUnJ1OUI3NGc/edit?usp=sharing results] (N3) file and store it into a directory.
- * Load the above results.n3 file into in-memory sesame index by calling the  ResultsLoader.loadResults(ResultsFileLocation) function. This is one time process and you dont  need to load every time you run a query. 
- * You can compute the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
- * You can retrieve the results missed by federation engine (if any) by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
+ # Download the Java [https://drive.google.com/file/d/0BzemFAUFXpqOZHBHNjZyLVA3WE0/edit?usp=sharing BigRDFBench-F1_Measure.jar] and include into the underlying federation engine jar libraries. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
+ # Download the BigRDFBench actual [https://drive.google.com/file/d/0BzemFAUFXpqOM2xnUnJ1OUI3NGc/edit?usp=sharing results] (N3) file and store it into a directory.
+ # Load the above results.n3 file into in-memory sesame index by calling the  ResultsLoader.loadResults(ResultsFileLocation) function. This is one time process and you dont  need to load every time you run a query. 
+ # You can compute the Precision, Recall, and F1 score by calling the function StatsGenerator.getFscores(BigRDFBenchQueryNo, QueryResultSetIterator). 
+ # You can retrieve the results missed by federation engine (if any) by calling the function StatsGenerator.getMissingResults(BigRDFBenchQueryNo, QueryResultSetIterator
 
 A sample code (FedX based) for retrieving the Precision, Recall and F1 scores of BigRDFBench query no S2 is given below. 
 			
