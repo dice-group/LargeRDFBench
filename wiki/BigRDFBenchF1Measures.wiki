@@ -38,8 +38,9 @@ System.out.println(StatsGenerator.getFscores("D://results/S2", res));
 }}}
 
 A sample output is given below. 
-
+{{{
 Precision: 1.0, Recall: 1.0, F1: 1.0
+}}}
 
 *The above steps also applied to [https://code.google.com/p/fbench/ FedBench] federation benchmark. 
 
