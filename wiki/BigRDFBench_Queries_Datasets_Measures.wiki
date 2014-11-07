@@ -47,18 +47,18 @@ File[] listOfFiles = folder.listFiles();
 long count = 1; 
 for (File qryFile : listOfFiles)
   {	
-    BufferedReader br = new BufferedReader(new        FileReader(inputDir+qryFile.getName()));
+    BufferedReader br = new BufferedReader(new              FileReader(inputDir+qryFile.getName()));
     String line;
     String queryStr="";
-	while ((line = br.readLine()) != null) {
+	while ((line = br.readLine()) != null) 
+                {
 		   queryStr= queryStr+" "+line;
 		}
          br.close();
-		
-System.out.println("-----------------------------\n"+count+ ": "+qryFile.getName()+" Query: " + queryStr);
- QueryStatistics.printQueryStats(queryStr,qryFile.getName());
-	   	     count++;
-		}
+    System.out.println("--------\n"+count+ ": "+qryFile.getName()+" Query: " + queryStr);
+    QueryStatistics.printQueryStats(queryStr,qryFile.getName());
+    count++;
+   }
 }}}
 
 Add your content here.  Format your content with:
