@@ -95,15 +95,15 @@ Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfben
  static HashMap<String, String> stmtFilters = new  HashMap<String, String>(); // A hashmap contains triple patter as key corresponding filter clause as value for those triple patterns whose selectivity is depended upon Filter clause. load this map from file /queryfilters/stp.txt (strict format is must, should be done via coding)
 	 static HashMap<String, String> epToResults = new  HashMap<String, String>(); // endpoint url to total number of results.
 	 static List<String> endpoints =  Arrays.asList(
-			    // "http://localhost:8890/sparql",
+			         "http://localhost:8890/sparql",
 				 "http://localhost:8891/sparql",
-//				 "http://localhost:8892/sparql",
-//				 "http://localhost:8893/sparql",
-//				 "http://localhost:8894/sparql",
-//				 "http://localhost:8895/sparql",
-//				 "http://localhost:8896/sparql",
-//				 "http://localhost:8897/sparql",
-//				 "http://localhost:8898/sparql",
+				 "http://localhost:8892/sparql",
+				 "http://localhost:8893/sparql",
+				 "http://localhost:8894/sparql",
+				 "http://localhost:8895/sparql",
+				 "http://localhost:8896/sparql",
+				 "http://localhost:8897/sparql",
+				 "http://localhost:8898/sparql",
 				 "http://localhost:8899/sparql",
 				 "http://localhost:8887/sparql",
 				 "http://localhost:8888/sparql",
@@ -115,7 +115,7 @@ Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfben
 
 Then run the following code. 
 {{{
-loadStatementFilters("../BigRDFBench-Utilities/queryfilters/stp.txt");
+                loadStatementFilters("../BigRDFBench-Utilities/queryfilters/stp.txt");
 		loadEPtoRSfromFile("../BigRDFBench-Utilities/datasetsizes/sizes.txt");
 		String inputDir= "../BigRDFBench-Utilities/queries/";
 		File folder = new File(inputDir);
@@ -131,7 +131,7 @@ loadStatementFilters("../BigRDFBench-Utilities/queryfilters/stp.txt");
 		}
 		br.close();
 		
-			 System.out.println("--------------------------------------------------------------\n"+count+ ": "+qryFile.getName()+" Query: " + queryStr);
+		System.out.println("-----\n"+count+ ": "+qryFile.getName()+" Query: " + queryStr);
 		     printQueryStats(queryStr,qryFile.getName());
 	   	     count++;
 		}
@@ -159,3 +159,5 @@ Mean query selectivity (average of of the mean triple pattern selectivities): 0.
 Query Selectivities standard deviation: 0.5773488892379413
 Triple Patterns: 3
 }}}
+<font color="red">
+The mean triple pattern selectivities along with complete details, for all of the BigRDFBench queries can be found [http://goo.gl/fDNXj9 here] </font> 
