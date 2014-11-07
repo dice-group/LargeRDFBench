@@ -33,7 +33,7 @@ Weighted Coverage : 9.146214909315279E-6
 Overall Structuredness or Coherence: 0.506684470477653
 }}}
 
-The details about coverage and weighted coverage can be found in Duan et al. paper. The complete results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
+The details about coverage and weighted coverage can be found in Duan et al. paper. The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
 
 = Details =
 
