@@ -1,4 +1,4 @@
-#summary Calculated various measures of benchmark datasets and queries.
+#summary How to calculate various measures of benchmark datasets and queries?
 
 = Introduction =
 
