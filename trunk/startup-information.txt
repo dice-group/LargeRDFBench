@@ -1,4 +1,4 @@
-Startup files information. 
+Startup files information for the selected systems. 
 
 ----------FedX-original-----------------------
 package : package org.aksw.simba.start;
@@ -20,5 +20,8 @@ File:QueryProcessingEval.java
 Follow the instructions given at https://github.com/anapsid/anapsid to configure the system 
 and then use anapsid/ivan-scripts/runQuery.sh to run a query
 
-----------BigRDFBench-F1Scores-----------------------
+----------How to automatically calculate precision, recall and F1 scores for a given SPARQL query? -----------------------
 Please refer to wiki page https://code.google.com/p/bigrdfbench/wiki/BigRDFBenchF1Measures for usage. 
+
+--------How to automatically calculate various features of the Queries and Datasets ?---------------
+Please refer to wiki page https://code.google.com/p/bigrdfbench/wiki/BigRDFBench_Queries_Datasets_Measures

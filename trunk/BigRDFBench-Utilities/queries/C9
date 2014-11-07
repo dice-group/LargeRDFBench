@@ -1,0 +1,21 @@
+Prefix dbpedia: <http://dbpedia.org/ontology/>
+Prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix owl: <http://www.w3.org/2002/07/owl#>
+Prefix drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
+SELECT * WHERE 
+{
+?Drug rdf:type dbpedia:Drug .
+?drugbankDrug owl:sameAs ?Drug .
+?InteractionName drugbank:interactionDrug1 ?drugbankDrug .
+?InteractionName drugbank:interactionDrug2 ?drugbankDrug2 .
+?InteractionName drugbank:text ?IntEffect 
+OPTIONAL
+{
+?drugbankDrug  drugbank:affectedOrganism 'Humans and other mammals';
+drugbank:description ?description ;
+drugbank:structure ?structure ;
+drugbank:casRegistryNumber ?casRegistryNumber
+}
+}
+ORDER BY (?drugbankDrug)
+LIMIT 100

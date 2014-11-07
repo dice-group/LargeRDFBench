@@ -1,0 +1,25 @@
+prefix swc: <http://data.semanticweb.org/ns/swc/ontology#>
+prefix swrc: <http://swrc.ontoware.org/ontology#>
+prefix eswc: <http://data.semanticweb.org/conference/eswc/>
+prefix iswc:  <http://data.semanticweb.org/conference/iswc/2009/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix purl: <http://purl.org/ontology/bibo/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT * WHERE 
+{
+?paper swc:isPartOf iswc:proceedings .
+iswc:proceedings swrc:address ?proceedingAddress.
+?paper swrc:author ?author .
+?author swrc:affiliation ?affiliation ;
+ rdfs:label ?fullnames ;
+ foaf:based_near ?place.
+OPTIONAL
+{
+?place dbpedia:capital ?capital;
+       dbpedia:populationDensity  ?populationDensity;
+       dbpedia:governmentType   ?governmentType;
+       dbpedia:language  ?language ;
+       dbpedia:leaderTitle ?leaderTitle.
+}
+}

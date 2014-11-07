@@ -1,0 +1,10 @@
+artist<===>name<===>location<===>anylocation
+http://dbtune.org/jamendo/artist/1375<===>"The Maya Conglomerate"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/2285<===>"savium"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/2623032/<===>"Europe"
+http://dbtune.org/jamendo/artist/336463<===>"Etherdust"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/337054<===>"SMG"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/337239<===>"Mudit Sood"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/337309<===>"Rainvan"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/5510<===>"kwhyos"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1269750/<===>"Asia"
+http://dbtune.org/jamendo/artist/5836<===>"untied"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/2623032/<===>"Europe"
+http://dbtune.org/jamendo/artist/8028<===>"brynet"^^<http://www.w3.org/2001/XMLSchema#string><===>http://sws.geonames.org/1149361/<===>"Asia"

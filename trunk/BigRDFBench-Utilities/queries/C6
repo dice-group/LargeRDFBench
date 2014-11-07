@@ -1,0 +1,19 @@
+PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX nytimes: <http://data.nytimes.com/elements/>
+SELECT ?actor ?filmTitle ?news ?variants ?articleCount ?first_use ?latest_use
+WHERE 
+{
+?film purl:title 			?filmTitle .
+?film linkedmdb:actor 			?actor .
+?actor owl:sameAs 			?dbpediaURI.
+?nytURI owl:sameAs 			?dbpediaURI .
+?nytURI nytimes:topicPage 		?news ;
+	nytimes:number_of_variants 	?variants;
+	nytimes:associated_article_count ?articleCount;
+	nytimes:first_use 		?first_use;
+	nytimes:latest_use 		?latest_use
+}
+ORDER BY (?actor)

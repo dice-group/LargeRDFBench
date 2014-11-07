@@ -1,0 +1,3 @@
+film<===>director<===>genre
+http://dbpedia.org/resource/L%27ultimo_bacio<===>http://dbpedia.org/resource/Gabriele_Muccino<===>http://data.linkedmdb.org/resource/film_genre/4
+http://dbpedia.org/resource/Remember_Me%2C_My_Love<===>http://dbpedia.org/resource/Gabriele_Muccino<===>http://data.linkedmdb.org/resource/film_genre/4

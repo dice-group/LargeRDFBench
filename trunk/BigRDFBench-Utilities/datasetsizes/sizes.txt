@@ -1,0 +1,13 @@
+http://localhost:8890/sparql	4772706
+http://localhost:8891/sparql	42849609
+http://localhost:8892/sparql	517023
+http://localhost:8893/sparql	107950085
+http://localhost:8894/sparql	1049647
+http://localhost:8895/sparql	1090830
+http://localhost:8896/sparql	6147996
+http://localhost:8897/sparql	335198
+http://localhost:8898/sparql	103595
+http://localhost:8899/sparql	44207146
+http://localhost:8889/sparql	35329868
+http://localhost:8887/sparql	83006609
+http://localhost:8888/sparql	57429904

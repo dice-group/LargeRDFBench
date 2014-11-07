@@ -1,0 +1,23 @@
+prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+prefix geonames: <http://www.geonames.org/ontology#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+Prefix dbpedia: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?countryName ?countryCode ?locationMap ?population ?longitude ?latitude ?nationalAnthem ?foundingDate ?largestCity ?ethnicGroup ?motto
+{
+?NYTplace geonames:name ?countryName;
+geonames:countryCode ?countryCode;
+geonames:population  ?population;
+geo:long   ?longitude;
+geo:lat     ?latitude;
+owl:sameAs   ?geonameplace.
+OPTIONAL
+{
+?geonameplace dbpedia:capital ?capital;
+dbpedia:anthem ?nationalAnthem;
+dbpedia:foundingDate ?foundingDate;
+dbpedia:largestCity ?largestCity;
+dbpedia:ethnicGroup ?ethnicGroup;
+dbpedia:motto ?motto.
+}
+}
+LIMIT 50

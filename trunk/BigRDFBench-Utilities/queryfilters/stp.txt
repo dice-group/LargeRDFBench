@@ -1,0 +1,7 @@
+C1:drug_http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/molecularWeightAverage_molecularWeightAverage	FILTER (?molecularWeightAverage > 114)
+B2:patient_http://tcga.deri.ie/schema/tumor_weight_weight	FILTER(?weight <= 55)
+B3:patient_http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis_age	FILTER(?age <= 51)
+B4:patient_http://dbpedia.org/ontology/country_country	FILTER REGEX(?country, "Brazil|Vietnam", "i")
+B7:country_http://dbpedia.org/ontology/populationDensity_popDensity	FILTER(?popDensity >= 32)
+B8:recordNo_http://tcga.deri.ie/schema/protein_expression_value_expressionValue	FILTER (?expressionValue > 0.05)
+B8:results_http://tcga.deri.ie/schema/beta_value_expressionValue	FILTER (?expressionValue > 0.05)

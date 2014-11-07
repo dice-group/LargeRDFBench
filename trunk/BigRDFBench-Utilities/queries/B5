@@ -1,0 +1,19 @@
+PREFIX tcga: <http://tcga.deri.ie/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX affymetrix: <http://bio2rdf.org/affymetrix_vocabulary:>
+SELECT  ?methylationCNTNAP2   
+WHERE 
+{
+ ?s affymetrix:x-symbol <http://bio2rdf.org/symbol:CNTNAP2>.
+ ?s affymetrix:x-geneid ?geneId.
+ ?geneId rdf:type tcga:expression_gene_lookup.
+ ?geneId tcga:chromosome ?lookupChromosome. 
+ ?geneId tcga:start ?start.
+ ?geneId tcga:stop  ?stop. 
+ ?uri tcga:bcr_patient_barcode ?patient .
+ ?patient tcga:result ?recordNo .
+ ?recordNo tcga:chromosome   ?chromosome.
+ ?recordNo tcga:position     ?position.
+ ?recordNo tcga:beta_value  ?methylationCNTNAP2.
+ FILTER (?position >= ?start && ?position <= ?stop && str(?chromosome) = str(?lookupChromosome) )
+}
