@@ -85,6 +85,8 @@ Mean Join Vertices Degree: 3.0
 --------------------------------------------------------------
 }}}
 
+A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
