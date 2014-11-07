@@ -34,7 +34,7 @@ Overall Structuredness or Coherence: 0.506684470477653
 }}}
 
 The details about coverage and weighted coverage can be found in Duan et al. paper. 
-<font color="red"> The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here] </font>
+<font color="red"> The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [http://goo.gl/XpSSPN here] </font>
 
 == Query Features ==
 Please first read BigRDFBench paper to understand these query features. 
