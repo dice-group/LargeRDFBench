@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Calculated various measures of benchmark datasets and queries.
 
 = Introduction =
 
