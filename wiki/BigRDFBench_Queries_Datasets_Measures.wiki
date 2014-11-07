@@ -2,9 +2,9 @@
 
 For all of the given dataset and query features, you first need to download the Java [http://goo.gl/8ql1UA BigRDFBench_Util.jar] and include into the java project. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
 
-= Dataset Structuredness =
+== Dataset Structuredness ==
 
-Duan et al. " Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets" introduced the notion of structuredness or choerence, which indicates whether the instances in a dataset have only a few or all attributes of their types set. They show that artificial datasets are typically highly structured and “real” datasets are less structured.  For a given dataset,the structuredness value ranges [0,1] with 0 means less structured and 1 means high structured dataset. A federated SPARQL query benchmark should comprise datasets of varying structuredness values. 
+Duan et al. " Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets" introduced the notion of structuredness or choerence, which indicates whether the instances in a dataset have only a few or all attributes of their types set. They show that artificial datasets are typically highly structured and “real” datasets are less structured.  For a given dataset,the structuredness value ranges [0,1] with 0 means less structured and 1 means high structured dataset. A federated SPARQL query benchmark should comprise datasets of varying structuredness values. You can calculate the structuredness value for a dataset (hosted as SPARQL endpoint) as follow. 
 
 {{{
 String endpointUrl = "http://localhost:8894/sparql";   //endpoint URL
@@ -14,7 +14,56 @@ System.out.println("\nOverall Structuredness or Coherence: " + coherence);
 
 }}}
 
+A sample output for jamendo dataset is given below: 
+{{{
+Total rdf:types: 11
 
+1 : Type: http://purl.org/ontology/mo/Playlist
+Coverage : 1.0
+Weighted Coverage : 0.35410925874896665
+
+2 : Type: http://purl.org/ontology/mo/Record
+Coverage : 0.7889541805891616
+Weighted Coverage : 0.019960732984293194
+
+3 : Type: http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag
+Coverage : 1.0
+Weighted Coverage : 0.03181317167263709
+
+4 : Type: http://www.w3.org/2006/time#Interval
+Coverage : 1.0
+Weighted Coverage : 0.15718861945439516
+
+5 : Type: http://purl.org/ontology/mo/Torrent
+Coverage : 1.0
+Weighted Coverage : 0.039862909892532376
+
+6 : Type: http://xmlns.com/foaf/0.1/Document
+Coverage : 0.0
+Weighted Coverage : 3.168917057040507E-4
+
+7 : Type: http://purl.org/ontology/mo/Track
+Coverage : 0.8059210237980453
+Weighted Coverage : 0.15720239735464314
+
+8 : Type: http://purl.org/ontology/mo/MusicArtist
+Coverage : 0.6866109639290809
+Weighted Coverage : 0.012096996417745936
+
+9 : Type: http://purl.org/ontology/mo/Lyrics
+Coverage : 1.0
+Weighted Coverage : 0.030394047947092863
+
+10 : Type: http://purl.org/ontology/mo/Signal
+Coverage : 1.0
+Weighted Coverage : 0.15719206392945714
+
+11 : Type: http://purl.org/ontology/mo/ED2K
+Coverage : 1.0
+Weighted Coverage : 0.039862909892532376
+
+Overall Structuredness or Coherence: 0.9611697326637922
+}}}
 
 
 = Details =
