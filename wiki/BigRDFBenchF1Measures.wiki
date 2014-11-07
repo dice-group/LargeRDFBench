@@ -6,10 +6,14 @@ This page provides details about how one can use the BigRDFBench java utility to
 
  # Download the Java [http://goo.gl/8ql1UA BigRDFBench_Util.jar] and include into the underlying federation engine jar libraries. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
  # Download the BigRDFBench actual queries [http://goo.gl/8tX1Pa results] folder and store in your computer.
- # You can compute the Precision, Recall, and F1 score by calling the function {{{
+ # You can compute the Precision, Recall, and F1 score by calling the function 
+
+{{{
 StatsGenerator.getFscores(String queryAcutalResultsFile,TupleQueryResult res) or StatsGenerator.getFscores(String queryAcutalResultsFile, ArrayList<String> currentQueryResults).
 }}}
+
  # You can retrieve the results missed by federation engine (if any) by calling the function 
+
 {{{
 StatsGenerator.getMissingResults(String queryAcutalResultsFile,TupleQueryResult res) or StatsGenerator.getMissingResults(String queryAcutalResultsFile, ArrayList<String> currentQueryResults). 
 }}}
