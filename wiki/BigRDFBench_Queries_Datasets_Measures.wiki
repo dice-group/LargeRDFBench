@@ -89,7 +89,7 @@ Mean Join Vertices Degree: 3.0
 A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]</font>
 
 == Triple Patterns Selectivities ==
-Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. Se the following accordingly in the org.aksw.simba.bigrdfbench.util.selectivity class.
+Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. Set the following required information in the org.aksw.simba.bigrdfbench.util.selectivity class.
   
 {{{
  static HashMap<String, String> stmtFilters = new  HashMap<String, String>(); // A hashmap contains triple patter as key corresponding filter clause as value for those triple patterns whose selectivity is depended upon Filter clause. load this map from file /queryfilters/stp.txt (strict format is must, should be done via coding)
