@@ -61,6 +61,33 @@ for (File qryFile : listOfFiles)
    }
 }}}
 
+A sample output is given below
+{{{
+--------------------------------------------------------------
+1: B1 Query:  PREFIX tcga: <http://tcga.deri.ie/schema/>  SELECT  ?expValue  WHERE {   {    ?s	tcga:bcr_patient_barcode	<http://tcga.deri.ie/TCGA-37-3789>.      <http://tcga.deri.ie/TCGA-37-3789>	tcga:result	?results.     ?results  tcga:RPKM ?expValue.   } UNION   {    ?uri	tcga:bcr_patient_barcode	<http://tcga.deri.ie/TCGA-37-3789>.      <http://tcga.deri.ie/TCGA-37-3789>	tcga:result	?geneResults.     ?geneResults  tcga:scaled_estimate ?expValue.   } }
+Basic Graph Patterns (BGPs): 2
+Triple Patterns: 6
+Total Vertices:14 ==> [http://tcga.deri.ie/schema/bcr_patient_barcode, uri, http://tcga.deri.ie/TCGA-37-3789, expValue, http://tcga.deri.ie/schema/RPKM, geneResults, http://tcga.deri.ie/TCGA-37-3789, results, s, http://tcga.deri.ie/schema/result, expValue, http://tcga.deri.ie/schema/result, http://tcga.deri.ie/schema/scaled_estimate, http://tcga.deri.ie/schema/bcr_patient_barcode]
+Join Vertices: 4 ==> [http://tcga.deri.ie/TCGA-37-3789, http://tcga.deri.ie/TCGA-37-3789, results, geneResults]
+Join Vertices to Total Vertices ratio: 0.2857142857142857
+     http://tcga.deri.ie/TCGA-37-3789 Join Vertex Degree: 2, Join Vertex Type: path
+     http://tcga.deri.ie/TCGA-37-3789 Join Vertex Degree: 2, Join Vertex Type: path
+     results Join Vertex Degree: 2, Join Vertex Type: path
+     geneResults Join Vertex Degree: 2, Join Vertex Type: path
+Mean Join Vertices Degree: 2.0
+--------------------------------------------------------------
+2: B2 Query:  PREFIX tcga: <http://tcga.deri.ie/schema/>  SELECT   DISTINCT ?patient ?tumorType ?exonValue WHERE { ?s tcga:bcr_patient_barcode ?patient. ?patient tcga:disease_acronym <http://tcga.deri.ie/lusc>. ?patient tcga:tumor_weight ?weight. ?patient tcga:tumor_type ?tumorType.  ?patient tcga:result ?results. ?results tcga:RPKM  ?exonValue. FILTER(?weight <= 55) }
+Basic Graph Patterns (BGPs): 1
+Triple Patterns: 6
+Total Vertices:13 ==> [http://tcga.deri.ie/schema/tumor_type, http://tcga.deri.ie/schema/bcr_patient_barcode, http://tcga.deri.ie/schema/RPKM, s, tumorType, patient, http://tcga.deri.ie/schema/tumor_weight, results, http://tcga.deri.ie/schema/result, exonValue, http://tcga.deri.ie/schema/disease_acronym, http://tcga.deri.ie/lusc, weight]
+Join Vertices: 2 ==> [results, patient]
+Join Vertices to Total Vertices ratio: 0.15384615384615385
+     results Join Vertex Degree: 2, Join Vertex Type: path
+     patient Join Vertex Degree: 5, Join Vertex Type: Hybrid
+Mean Join Vertices Degree: 3.5
+--------------------------------------------------------------
+}}}
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
