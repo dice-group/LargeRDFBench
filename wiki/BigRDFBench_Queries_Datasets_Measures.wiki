@@ -35,7 +35,7 @@ Overall Structuredness or Coherence: 0.506684470477653
 
 The details about coverage and weighted coverage can be found in Duan et al. paper. The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
 
-== Details ==
+== Query Features ==
 Please first read BigRDFBench paper to understand these query features. 
 
 Put all of your benchmark queries in a folder (one query per file). Query Features for all of the queries can be printed as follow. 
@@ -87,7 +87,4 @@ Mean Join Vertices Degree: 3.0
 
 A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Triple Patterns Selectivities ==
