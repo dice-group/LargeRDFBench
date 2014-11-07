@@ -1,0 +1,15 @@
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT  ?patient ?methylationValue
+WHERE
+{
+?s tcga:bcr_patient_barcode ?patient.
+?patient <http://tcga.deri.ie/schema/vital_status> "Dead".
+?patient tcga:bcr_drug_barcode ?drug.
+?drug tcga:drug_name "Tarceva".
+?patient <http://tcga.deri.ie/schema/age_at_initial_pathologic_diagnosis> ?age.
+?patient tcga:result ?results.
+?results  tcga:beta_value ?methylationValue.
+FILTER(?age <= 51)
+}
+ORDER BY (?patient)

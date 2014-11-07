@@ -1,0 +1,19 @@
+PREFIX foaf: 		<http://xmlns.com/foaf/0.1/>
+PREFIX geonames: 	<http://www.geonames.org/ontology#>
+PREFIX mo:   		<http://purl.org/ontology/mo/>
+PREFIX nytimes:         <http://data.nytimes.com/elements/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?artist ?name ?location ?anylocation
+WHERE {
+	     ?artist a mo:MusicArtist ;
+         foaf:name ?name ;
+		 foaf:based_near ?location .
+         ?location geonames:parentFeature ?locationName .
+         ?locationName geonames:name ?anylocation .
+         ?nytLocation owl:sameAs ?location.
+         ?nytLocation nytimes:topicPage ?news 
+OPTIONAL 
+{
+         ?locationName geonames:name 'Islamic Republic of Afghanistan' .
+}
+}

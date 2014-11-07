@@ -1,0 +1,20 @@
+PREFIX tcga: <http://tcga.deri.ie/schema/> 
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+SELECT    ?expressionValues
+WHERE
+{
+ {
+  ?uri tcga:bcr_patient_barcode ?patient.
+  ?patient dbpedia:country ?country.
+  ?patient tcga:result ?results.
+  ?results  tcga:reads_per_million_miRNA_mapped ?expressionValues.
+ }
+UNION
+ {
+  ?s tcga:bcr_patient_barcode ?patient.
+  ?patient dbpedia:country ?country.
+  ?patient tcga:result ?exonResults.
+  ?exonResults tcga:RPKM ?expressionValues.
+ }
+FILTER REGEX(?country,"Brazil|Argentina", "i")
+}
