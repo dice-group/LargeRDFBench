@@ -47,7 +47,7 @@ File[] listOfFiles = folder.listFiles();
 long count = 1; 
 for (File qryFile : listOfFiles)
   {	
-    BufferedReader br = new BufferedReader(new              FileReader(inputDir+qryFile.getName()));
+    BufferedReader br = new BufferedReader(new FileReader(inputDir+qryFile.getName()));
     String line;
     String queryStr="";
 	while ((line = br.readLine()) != null) 
