@@ -33,7 +33,8 @@ Weighted Coverage : 9.146214909315279E-6
 Overall Structuredness or Coherence: 0.506684470477653
 }}}
 
-The details about coverage and weighted coverage can be found in Duan et al. paper. The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
+The details about coverage and weighted coverage can be found in Duan et al. paper. 
+<font color="red"> The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here] </font>
 
 == Query Features ==
 Please first read BigRDFBench paper to understand these query features. 
@@ -84,7 +85,7 @@ Join Vertices to Total Vertices ratio: 0.18181818181818182
 Mean Join Vertices Degree: 3.0
 --------------------------------------------------------------
 }}}
-
-A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]
+<font color="red">
+A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]</font>
 
 == Triple Patterns Selectivities ==
