@@ -8,7 +8,7 @@ Duan et al. " Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Da
 
 {{{
 String endpointUrl = "http://localhost:8894/sparql";   //endpoint URL
-String namedGraph = "http://aksw.org/bigrdfedbench/";  // named Graph
+String namedGraph = "http://aksw.org/benchmark";   // named Graph
 double coherence = StructurednessCalculator.getStructurednessValue(endpointUrl, namedGraph);
 System.out.println("\nOverall Structuredness or Coherence: " + coherence);
 
@@ -35,7 +35,31 @@ Overall Structuredness or Coherence: 0.506684470477653
 
 The details about coverage and weighted coverage can be found in Duan et al. paper. The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
 
-= Details =
+== Details ==
+Please first read BigRDFBench paper to understand these query features. 
+
+Put all of your benchmark queries in a folder (one query per file). Query Features for all of the queries can be printed as follow. 
+
+{{{
+String inputDir= "../BigRDFBench-Utilities/queries/";
+File folder = new File(inputDir);
+File[] listOfFiles = folder.listFiles();
+long count = 1; 
+for (File qryFile : listOfFiles)
+	{	
+		BufferedReader br = new BufferedReader(new                 FileReader(inputDir+qryFile.getName()));
+		String line;
+		String queryStr="";
+		while ((line = br.readLine()) != null) {
+		   queryStr= queryStr+" "+line;
+		}
+		br.close();
+		
+System.out.println("-----------------------------\n"+count+ ": "+qryFile.getName()+" Query: " + queryStr);
+		     QueryStatistics.printQueryStats(queryStr,qryFile.getName());
+	   	     count++;
+		}
+}}}
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
