@@ -9,13 +9,17 @@ This page provides details about how one can use the BigRDFBench java utility to
  # You can compute the Precision, Recall, and F1 score by calling the function 
 
 {{{
-StatsGenerator.getFscores(String queryAcutalResultsFile,TupleQueryResult res) or StatsGenerator.getFscores(String queryAcutalResultsFile, ArrayList<String> currentQueryResults).
+StatsGenerator.getFscores(String queryAcutalResultsFile,TupleQueryResult res)
+ OR
+StatsGenerator.getFscores(String queryAcutalResultsFile, ArrayList<String> currentQueryResults).
 }}}
 
  # You can retrieve the results missed by federation engine (if any) by calling the function 
 
 {{{
-StatsGenerator.getMissingResults(String queryAcutalResultsFile,TupleQueryResult res) or StatsGenerator.getMissingResults(String queryAcutalResultsFile, ArrayList<String> currentQueryResults). 
+StatsGenerator.getMissingResults(String queryAcutalResultsFile,TupleQueryResult res)
+OR
+StatsGenerator.getMissingResults(String queryAcutalResultsFile, ArrayList<String> currentQueryResults). 
 }}}
 
 A sample code (FedX based) for retrieving the Precision, Recall and F1 scores of BigRDFBench query no S2 is given below. 
