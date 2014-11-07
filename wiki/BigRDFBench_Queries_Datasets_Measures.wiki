@@ -1,4 +1,4 @@
-#Calculated various measures of benchmark datasets and queries.
+Calculated various measures of benchmark datasets and queries.
 
 = Introduction =
 
