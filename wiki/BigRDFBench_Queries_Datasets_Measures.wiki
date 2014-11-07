@@ -14,57 +14,26 @@ System.out.println("\nOverall Structuredness or Coherence: " + coherence);
 
 }}}
 
-A sample output for jamendo dataset is given below: 
+A sample output for Affymetrix dataset is given below: 
 {{{
-Total rdf:types: 11
+Total rdf:types: 3
 
-1 : Type: http://purl.org/ontology/mo/Playlist
+1 : Type: http://rdfs.org/ns/void#Dataset
+Coverage : 0.6
+Weighted Coverage : 8.442659916291027E-6
+
+2 : Type: http://bio2rdf.org/affymetrix_vocabulary:Probeset
+Coverage : 0.5066791705833019
+Weighted Coverage : 0.9999824111251744
+
+3 : Type: http://bio2rdf.org/dataset_vocabulary:Endpoint
 Coverage : 1.0
-Weighted Coverage : 0.35410925874896665
+Weighted Coverage : 9.146214909315279E-6
 
-2 : Type: http://purl.org/ontology/mo/Record
-Coverage : 0.7889541805891616
-Weighted Coverage : 0.019960732984293194
-
-3 : Type: http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag
-Coverage : 1.0
-Weighted Coverage : 0.03181317167263709
-
-4 : Type: http://www.w3.org/2006/time#Interval
-Coverage : 1.0
-Weighted Coverage : 0.15718861945439516
-
-5 : Type: http://purl.org/ontology/mo/Torrent
-Coverage : 1.0
-Weighted Coverage : 0.039862909892532376
-
-6 : Type: http://xmlns.com/foaf/0.1/Document
-Coverage : 0.0
-Weighted Coverage : 3.168917057040507E-4
-
-7 : Type: http://purl.org/ontology/mo/Track
-Coverage : 0.8059210237980453
-Weighted Coverage : 0.15720239735464314
-
-8 : Type: http://purl.org/ontology/mo/MusicArtist
-Coverage : 0.6866109639290809
-Weighted Coverage : 0.012096996417745936
-
-9 : Type: http://purl.org/ontology/mo/Lyrics
-Coverage : 1.0
-Weighted Coverage : 0.030394047947092863
-
-10 : Type: http://purl.org/ontology/mo/Signal
-Coverage : 1.0
-Weighted Coverage : 0.15719206392945714
-
-11 : Type: http://purl.org/ontology/mo/ED2K
-Coverage : 1.0
-Weighted Coverage : 0.039862909892532376
-
-Overall Structuredness or Coherence: 0.9611697326637922
+Overall Structuredness or Coherence: 0.506684470477653
 }}}
 
+The details about coverage and weighted coverage can be found in Duan et al. paper. The complete results for all of the BigRDFBench datasets is given [https://drive.google.com/file/d/0BzemFAUFXpqOMXRLaHdueWlOUlE/view?usp=sharing here]
 
 = Details =
 
