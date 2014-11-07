@@ -1,8 +1,20 @@
 #summary How to calculate various measures of benchmark datasets and queries?
 
-= Introduction =
+For all of the given dataset and query features, you first need to download the Java [http://goo.gl/8ql1UA BigRDFBench_Util.jar] and include into the java project. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
 
-Add your content here.
+= Dataset Structuredness =
+
+Duan et al. " Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets" introduced the notion of structuredness or choerence, which indicates whether the instances in a dataset have only a few or all attributes of their types set. They show that artificial datasets are typically highly structured and “real” datasets are less structured.  For a given dataset,the structuredness value ranges [0,1] with 0 means less structured and 1 means high structured dataset. A federated SPARQL query benchmark should comprise datasets of varying structuredness values. 
+
+{{{
+String endpointUrl = "http://localhost:8894/sparql";   //endpoint URL
+String namedGraph = "http://aksw.org/bigrdfedbench/";  // named Graph
+double coherence = StructurednessCalculator.getStructurednessValue(endpointUrl, namedGraph);
+System.out.println("\nOverall Structuredness or Coherence: " + coherence);
+
+}}}
+
+
 
 
 = Details =
