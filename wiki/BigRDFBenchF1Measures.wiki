@@ -44,7 +44,7 @@ Precision: 1.0, Recall: 1.0, F1: 1.0
 
 *The above steps also applied to [https://code.google.com/p/fbench/ FedBench] federation benchmark. 
 
-=== Using with any other Benchamrk===
+=== Using with any other Benchmark===
 All of the steps remain the same for using this utility with any other benchmark. Just you need to get the actual results of the benchmark queries and store in separate files in a directory. The results should be one per line and the separator (we used <===> see [http://goo.gl/8tX1Pa results]) between projection elements in a result should be constant for all queries results. You may use any other separator and change the code accordingly. 
 
 It is important to note that this utility is highly sensitive to character encoding (UTF-8 is used) specially query C8 contains many rare characters which needs proper encoding. Therefore, it is highly recommended to have a special look at the Precision, Recall, and F1 values for this query. It is also important to note that Precision, Recall, and F1 scores are not valid if SPARQL LIMIT clause is used in the query (C1,C4,C5,C9). This is because the results comes in random order until the specified LIMIT is reached. 
