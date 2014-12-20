@@ -27,7 +27,8 @@ public class QueryStatistics {
 	private static final int boundObjLiteralCount = 0;
 	@SuppressWarnings("unused")
 	private static long boundSbjCount, boundPredCount, boundObjURICount, BoundObjLiteralCount,grandTotalTriplePatterns = 0 ; 
-	 public static void main(String[] args) throws RepositoryException, MalformedQueryException, QueryEvaluationException, IOException {
+	 
+	public static void main(String[] args) throws RepositoryException, MalformedQueryException, QueryEvaluationException, IOException {
 		
 		String inputDir= "../BigRDFBench-Utilities/queries/";
 		File folder = new File(inputDir);
