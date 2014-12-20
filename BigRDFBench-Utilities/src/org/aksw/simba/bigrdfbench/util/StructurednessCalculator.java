@@ -25,8 +25,8 @@ public class StructurednessCalculator {
 	private static RepositoryConnection con = null;
 	public static void main(String[] args) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 
-		String endpointUrl = "http://localhost:8887/sparql";
-		String namedGraph = "http://aksw.org/bigrdfbench"; 
+		String endpointUrl = "http://localhost:8892/sparql";
+		String namedGraph = "http://sider"; 
 		double coherence = getStructurednessValue(endpointUrl, namedGraph);
 		System.out.println("\nOverall Structuredness or Coherence: " + coherence);
 		
