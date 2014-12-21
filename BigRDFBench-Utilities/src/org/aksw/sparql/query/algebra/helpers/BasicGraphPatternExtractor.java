@@ -40,31 +40,31 @@ import org.openrdf.query.algebra.helpers.QueryModelVisitorBase;
  * @author Olaf Goerlitz
  */
 public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeException> {
-	
+
 	private TupleExpr lastBGPNode;
-	
+
 	private List<TupleExpr> bgpList = new ArrayList<TupleExpr>();
-	
+
 	/**
 	 * Prevents creation of extractor classes.
 	 * The static process() method must be used instead.
 	 */
 	private BasicGraphPatternExtractor() {}
-	
+
 	public static List<TupleExpr> process(QueryModelNode node) {
 		BasicGraphPatternExtractor ex = new BasicGraphPatternExtractor();
 		node.visit(ex);
 		return ex.bgpList;
 	}
-	
+
 	// --------------------------------------------------------------
-	
+
 	/**
 	 * Handles binary nodes with potential BGPs as children (e.g. union, left join).
 	 */
 	@Override
 	public void meetBinaryTupleOperator(BinaryTupleOperator node) throws RuntimeException {
-		
+
 		for (TupleExpr expr : new TupleExpr[] { node.getLeftArg(), node.getRightArg() }) {
 			expr.visit(this);
 			if (lastBGPNode != null) {
@@ -74,7 +74,7 @@ public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeExc
 			}
 		}
 	}
-	
+
 	/**
 	 * Handles unary nodes with a potential BGP as child (e.g. projection).
 	 */
@@ -82,7 +82,7 @@ public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeExc
 	public void meetUnaryTupleOperator(UnaryTupleOperator node) throws RuntimeException {
 
 		node.getArg().visit(this);
-		
+
 		if (lastBGPNode != null) {
 			// child is a BGP node but this node is not
 			this.bgpList.add(lastBGPNode);
@@ -97,10 +97,10 @@ public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeExc
 	public void meet(StatementPattern node) throws RuntimeException {
 		this.lastBGPNode = node;
 	}
-	
+
 	@Override
 	public void meet(Filter filter) throws RuntimeException {
-	
+
 		// visit the filter argument but ignore the filter condition
 		filter.getArg().visit(this);
 		//System.out.println("Filter is: " +filter.getCondition());
@@ -109,12 +109,12 @@ public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeExc
 			lastBGPNode = filter;
 		}
 	}
-	
+
 	@Override
 	public void meet(Join join) throws RuntimeException {
-		
+
 		boolean valid = true;
-		
+
 		// visit join arguments and check that all are valid BGPS
 		for (TupleExpr expr : new TupleExpr[] { join.getLeftArg(), join.getRightArg() }) {
 			expr.visit(this);
@@ -132,65 +132,65 @@ public class BasicGraphPatternExtractor extends QueryModelVisitorBase<RuntimeExc
 		if (valid)
 			lastBGPNode = join;
 	}
-	
+
 	// --------------------------------------------------------------
 
-//	@Override
-//	public void meet(Filter filter) throws RuntimeException {
-//		
-//		// visit the filter argument but ignore the filter condition
-//		filter.getArg().visit(this);
-//		
-//		// TODO: need to check for valid child node
-//		
-//		// check if the parent node is a valid BGP node (Join or Filter)
-//		// because invalid BGP (parent) nodes are not visited
-//		QueryModelNode parent = filter.getParentNode();
-//		if (parent instanceof Join || parent instanceof Filter) {
-////			this.filters.add(filter.getCondition());
-//			return;
-//		}
-//		// otherwise check if filter is a direct child of a Projection or
-//		// inside a left join expression
-//		// TODO: what if parent is Limit or OrderBy?
-//		if (parent instanceof Projection || parent instanceof MultiProjection
-//				|| parent instanceof LeftJoin || parent instanceof Order || parent instanceof Slice ) {
-////			this.filters.add(filter.getCondition());
-//		}
-////		saveBGP(filter, parent);
-//		this.bgpList.add(filter);
-//	}
-//
-//	@Override
-//	public void meet(Join join) throws RuntimeException {
-//		
-//		boolean valid = true;
-////		List<? extends TupleExpr> joinArgs = join.getArgs();
-//		TupleExpr[] joinArgs = { join.getLeftArg(), join.getRightArg()};
-//		
-//		// First check if Join is a valid BGP - only if all join arguments are valid BGPs
-//		for (TupleExpr expr : joinArgs) {
-//			if (expr instanceof Join || expr instanceof Filter || expr instanceof StatementPattern)
-//				continue;
-//			else
-//				valid = false;
-//		}
-//		
-//		// then process all join arguments but store each valid child BGPs if this join is not a valid BGP
-//		for (TupleExpr expr : joinArgs) {
-//			expr.visit(this);
-//			if (!valid && (expr instanceof Join || expr instanceof Filter || expr instanceof StatementPattern))
-////				saveBGP(expr, join);
-//				this.bgpList.add(expr);
-//		}
-//		
-//		// check if the parent node is a valid BGP node (Join or Filter)
-//		// because invalid BGP (parent) nodes are not visited
-//		QueryModelNode parent = join.getParentNode();
-//		if (valid && !(parent instanceof Join) && !(parent instanceof Filter)) {
-////			saveBGP(join, parent);
-//			this.bgpList.add(join);
-//		}
-//	}
+	//	@Override
+	//	public void meet(Filter filter) throws RuntimeException {
+	//		
+	//		// visit the filter argument but ignore the filter condition
+	//		filter.getArg().visit(this);
+	//		
+	//		// TODO: need to check for valid child node
+	//		
+	//		// check if the parent node is a valid BGP node (Join or Filter)
+	//		// because invalid BGP (parent) nodes are not visited
+	//		QueryModelNode parent = filter.getParentNode();
+	//		if (parent instanceof Join || parent instanceof Filter) {
+	////			this.filters.add(filter.getCondition());
+	//			return;
+	//		}
+	//		// otherwise check if filter is a direct child of a Projection or
+	//		// inside a left join expression
+	//		// TODO: what if parent is Limit or OrderBy?
+	//		if (parent instanceof Projection || parent instanceof MultiProjection
+	//				|| parent instanceof LeftJoin || parent instanceof Order || parent instanceof Slice ) {
+	////			this.filters.add(filter.getCondition());
+	//		}
+	////		saveBGP(filter, parent);
+	//		this.bgpList.add(filter);
+	//	}
+	//
+	//	@Override
+	//	public void meet(Join join) throws RuntimeException {
+	//		
+	//		boolean valid = true;
+	////		List<? extends TupleExpr> joinArgs = join.getArgs();
+	//		TupleExpr[] joinArgs = { join.getLeftArg(), join.getRightArg()};
+	//		
+	//		// First check if Join is a valid BGP - only if all join arguments are valid BGPs
+	//		for (TupleExpr expr : joinArgs) {
+	//			if (expr instanceof Join || expr instanceof Filter || expr instanceof StatementPattern)
+	//				continue;
+	//			else
+	//				valid = false;
+	//		}
+	//		
+	//		// then process all join arguments but store each valid child BGPs if this join is not a valid BGP
+	//		for (TupleExpr expr : joinArgs) {
+	//			expr.visit(this);
+	//			if (!valid && (expr instanceof Join || expr instanceof Filter || expr instanceof StatementPattern))
+	////				saveBGP(expr, join);
+	//				this.bgpList.add(expr);
+	//		}
+	//		
+	//		// check if the parent node is a valid BGP node (Join or Filter)
+	//		// because invalid BGP (parent) nodes are not visited
+	//		QueryModelNode parent = join.getParentNode();
+	//		if (valid && !(parent instanceof Join) && !(parent instanceof Filter)) {
+	////			saveBGP(join, parent);
+	//			this.bgpList.add(join);
+	//		}
+	//	}
 
 }
