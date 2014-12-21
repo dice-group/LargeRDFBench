@@ -26,20 +26,20 @@ public class BGPGroupGenerator
 	public static HashMap<Integer, List<StatementPattern>>  generateBgpGroups(String strQuery) throws MalformedQueryException
 	{
 		HashMap<Integer, List<StatementPattern>> bgpGrps = new HashMap<Integer, List<StatementPattern>>();
-	     int grpNo = 0;
-	     SPARQLParser parser = new SPARQLParser();
-	     ParsedQuery parsedQuery = parser.parseQuery(strQuery, null);
-	     TupleExpr query = parsedQuery.getTupleExpr();
-	    // collect all basic graph patterns
-	     
+		int grpNo = 0;
+		SPARQLParser parser = new SPARQLParser();
+		ParsedQuery parsedQuery = parser.parseQuery(strQuery, null);
+		TupleExpr query = parsedQuery.getTupleExpr();
+		// collect all basic graph patterns
+
 		for (TupleExpr bgp : BasicGraphPatternExtractor.process(query)) {
 			//System.out.println(bgp);
 			List<StatementPattern> patterns = StatementPatternCollector.process(bgp);	
 			bgpGrps.put(grpNo, patterns );
 			grpNo++;
-			}
-		
+		}
+
 		return bgpGrps;
-	   }
-	
+	}
+
 }

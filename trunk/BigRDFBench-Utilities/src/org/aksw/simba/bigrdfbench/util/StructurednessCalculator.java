@@ -21,15 +21,15 @@ import org.openrdf.repository.http.HTTPRepository;
  *
  */
 public class StructurednessCalculator {
-	
-	private static RepositoryConnection con = null;
+
+	public static RepositoryConnection con = null;
 	public static void main(String[] args) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 
 		String endpointUrl = "http://localhost:8892/sparql";
 		String namedGraph = "http://sider"; 
 		double coherence = getStructurednessValue(endpointUrl, namedGraph);
 		System.out.println("\nOverall Structuredness or Coherence: " + coherence);
-		
+
 	}
 
 	/**
@@ -64,11 +64,11 @@ public class StructurednessCalculator {
 				//System.out.println(predicate+ " occurences: "+predicateOccurences);
 				//System.out.println(occurenceSum);
 			}
-			
+
 			double denom = typePredicates.size()*typeInstancesSize;
 			if(typePredicates.size()==0)
 				denom = 1;
-						//System.out.println("Occurence sum  = " + occurenceSum);
+			//System.out.println("Occurence sum  = " + occurenceSum);
 			//System.out.println("Denom = " + denom);
 			double coverage = occurenceSum/denom;
 			System.out.println("\n"+count+ " : Type: " + type );
@@ -78,7 +78,7 @@ public class StructurednessCalculator {
 			structuredness = (structuredness + (coverage*weightedCoverage));
 			count++;
 		}
-		
+
 		return structuredness;
 	}
 	/**
@@ -90,7 +90,7 @@ public class StructurednessCalculator {
 	 * @throws MalformedQueryException
 	 * @throws QueryEvaluationException
 	 */
-	private static double getTypesWeightedDenomSum(Set<String> types, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
+	public static double getTypesWeightedDenomSum(Set<String> types, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 		double sum = 0 ; 
 		for(String type:types)
 		{
@@ -100,52 +100,52 @@ public class StructurednessCalculator {
 		}
 		return sum;
 	}
-/**
- * Get occurences of a predicate within a type
- * @param predicate Predicate
- * @param type Type
- * @param namedGraph Named Graph
- * @return predicateOccurences Predicate occurence value
- * @throws NumberFormatException
- * @throws QueryEvaluationException
- * @throws RepositoryException
- * @throws MalformedQueryException
- */
-	private static long getOccurences(String predicate, String type, String namedGraph) throws NumberFormatException, QueryEvaluationException, RepositoryException, MalformedQueryException {
+	/**
+	 * Get occurences of a predicate within a type
+	 * @param predicate Predicate
+	 * @param type Type
+	 * @param namedGraph Named Graph
+	 * @return predicateOccurences Predicate occurence value
+	 * @throws NumberFormatException
+	 * @throws QueryEvaluationException
+	 * @throws RepositoryException
+	 * @throws MalformedQueryException
+	 */
+	public static long getOccurences(String predicate, String type, String namedGraph) throws NumberFormatException, QueryEvaluationException, RepositoryException, MalformedQueryException {
 		long predicateOccurences = 0  ;
 		String queryString ;
 		if(namedGraph ==null)
-			 queryString = "SELECT Count(Distinct ?s) as ?occurences \n"
-						+ "			WHERE { \n"
-						+ "            ?s a <"+type+"> . "
-						+ "            ?s <"+predicate+"> ?o"
-						+ "           }" ;
+			queryString = "SELECT Count(Distinct ?s) as ?occurences \n"
+					+ "			WHERE { \n"
+					+ "            ?s a <"+type+"> . "
+					+ "            ?s <"+predicate+"> ?o"
+					+ "           }" ;
 		else
-		 queryString = "SELECT Count(Distinct ?s) as ?occurences From <"+ namedGraph+"> \n"
-				+ "			WHERE { \n"
-				+ "            ?s a <"+type+"> . "
-				+ "            ?s <"+predicate+"> ?o"
-				+ "           }" ;
-		 //System.out.println(queryString);
-	 	      TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-	 		  TupleQueryResult res = tupleQuery.evaluate();
-	 		   while(res.hasNext())
-	 		   {
-	 			  predicateOccurences = Long.parseLong(res.next().getValue("occurences").stringValue().toString());
-	 		   }
+			queryString = "SELECT Count(Distinct ?s) as ?occurences From <"+ namedGraph+"> \n"
+					+ "			WHERE { \n"
+					+ "            ?s a <"+type+"> . "
+					+ "            ?s <"+predicate+"> ?o"
+					+ "           }" ;
+		//System.out.println(queryString);
+		TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+		TupleQueryResult res = tupleQuery.evaluate();
+		while(res.hasNext())
+		{
+			predicateOccurences = Long.parseLong(res.next().getValue("occurences").stringValue().toString());
+		}
 		return predicateOccurences;
-		
+
 	}
-  /**
-   * Get the number of distinct instances of a specfici type
-   * @param type Type or class name
-   * @param namedGraph Named graph
-   * @return typeInstancesSize No of instances of type 
-   * @throws RepositoryException
-   * @throws MalformedQueryException
-   * @throws QueryEvaluationException
-   */
-	private static long getTypeInstancesSize(String type, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
+	/**
+	 * Get the number of distinct instances of a specfici type
+	 * @param type Type or class name
+	 * @param namedGraph Named graph
+	 * @return typeInstancesSize No of instances of type 
+	 * @throws RepositoryException
+	 * @throws MalformedQueryException
+	 * @throws QueryEvaluationException
+	 */
+	public static long getTypeInstancesSize(String type, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 		long typeInstancesSize =0;
 		String queryString ;
 		if(namedGraph ==null)
@@ -155,30 +155,30 @@ public class StructurednessCalculator {
 					+ "            ?s ?p ?o"
 					+ "           }" ;
 		else
-		queryString = "SELECT Count(DISTINCT ?s)  as ?cnt From <"+ namedGraph+"> \n"
-				+ "			WHERE { \n"
-				+ "            ?s a <"+type+"> . "
-				+ "            ?s ?p ?o"
-				+ "           }" ;
-		 //System.out.println(queryString);
-	 	      TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-	 		  TupleQueryResult res = tupleQuery.evaluate();
-	 		   while(res.hasNext())
-	 		   {
-	 			  typeInstancesSize =  Long.parseLong(res.next().getValue("cnt").stringValue().toString());
-	 		   }
+			queryString = "SELECT Count(DISTINCT ?s)  as ?cnt From <"+ namedGraph+"> \n"
+					+ "			WHERE { \n"
+					+ "            ?s a <"+type+"> . "
+					+ "            ?s ?p ?o"
+					+ "           }" ;
+		//System.out.println(queryString);
+		TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+		TupleQueryResult res = tupleQuery.evaluate();
+		while(res.hasNext())
+		{
+			typeInstancesSize =  Long.parseLong(res.next().getValue("cnt").stringValue().toString());
+		}
 		return typeInstancesSize;
 	}
-/**
- * Get all distinct predicates of a specific type
- * @param type Type of class
- * @param namedGraph Named Graph can be null
- * @return typePredicates Set of predicates of type 
- * @throws RepositoryException
- * @throws MalformedQueryException
- * @throws QueryEvaluationException
- */
-	private static Set<String> getTypePredicates(String type, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
+	/**
+	 * Get all distinct predicates of a specific type
+	 * @param type Type of class
+	 * @param namedGraph Named Graph can be null
+	 * @return typePredicates Set of predicates of type 
+	 * @throws RepositoryException
+	 * @throws MalformedQueryException
+	 * @throws QueryEvaluationException
+	 */
+	public static Set<String> getTypePredicates(String type, String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 		Set<String> typePredicates =new HashSet<String>() ;
 		String queryString ;
 		if(namedGraph ==null)
@@ -188,61 +188,61 @@ public class StructurednessCalculator {
 					+ "            ?s ?typePred ?o"
 					+ "           }" ;
 		else
-		queryString = "SELECT DISTINCT ?typePred From <"+ namedGraph+"> \n"
-				+ "			WHERE { \n"
-				+ "            ?s a <"+type+"> . "
-				+ "            ?s ?typePred ?o"
-				+ "           }" ;
-		 //System.out.println(queryString);
-	 	      TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-	 		  TupleQueryResult res = tupleQuery.evaluate();
-	 		   while(res.hasNext())
-	 		   {
-	 			   String predicate = res.next().getValue("typePred").toString();
-	 			   if (!predicate.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"))
-	 			   typePredicates.add(predicate);
-	 		   }
+			queryString = "SELECT DISTINCT ?typePred From <"+ namedGraph+"> \n"
+					+ "			WHERE { \n"
+					+ "            ?s a <"+type+"> . "
+					+ "            ?s ?typePred ?o"
+					+ "           }" ;
+		//System.out.println(queryString);
+		TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+		TupleQueryResult res = tupleQuery.evaluate();
+		while(res.hasNext())
+		{
+			String predicate = res.next().getValue("typePred").toString();
+			if (!predicate.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"))
+				typePredicates.add(predicate);
+		}
 		return typePredicates;
 	}
-/**
- * Initialize repository for a SPARQL endpoint
- * @param endpointUrl Endpoint Url
- * @throws RepositoryException
- */
-	private static void initializeRepoConnection(String endpointUrl) throws RepositoryException {
+	/**
+	 * Initialize repository for a SPARQL endpoint
+	 * @param endpointUrl Endpoint Url
+	 * @throws RepositoryException
+	 */
+	public static void initializeRepoConnection(String endpointUrl) throws RepositoryException {
 		Repository repo = new HTTPRepository(endpointUrl, "my-repoid");
 		repo.initialize();
-		 con = repo.getConnection();
-		
+		con = repo.getConnection();
+
 	}
-/**
- *  Get distinct set of rdf:type
- * @param namedGraph Named Graph of dataset can be null in that case all namedgraphs will be considered
- * @return types Set of rdf:types
- * @throws RepositoryException
- * @throws MalformedQueryException
- * @throws QueryEvaluationException
- */
-	private static Set<String> getRDFTypes(String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
+	/**
+	 *  Get distinct set of rdf:type
+	 * @param namedGraph Named Graph of dataset can be null in that case all namedgraphs will be considered
+	 * @return types Set of rdf:types
+	 * @throws RepositoryException
+	 * @throws MalformedQueryException
+	 * @throws QueryEvaluationException
+	 */
+	public static Set<String> getRDFTypes(String namedGraph) throws RepositoryException, MalformedQueryException, QueryEvaluationException {
 		Set<String> types =new HashSet<String>() ;
 		String queryString ="";
 		if(namedGraph ==null)
-			 queryString = "SELECT DISTINCT ?type  \n"
-						+ "			WHERE { \n"
-						+ "            ?s a ?type"
-						+ "           }" ;
+			queryString = "SELECT DISTINCT ?type  \n"
+					+ "			WHERE { \n"
+					+ "            ?s a ?type"
+					+ "           }" ;
 		else
-		 queryString = "SELECT DISTINCT ?type From <"+ namedGraph+"> \n"
-				+ "			WHERE { \n"
-				+ "            ?s a ?type"
-				+ "           }" ;
-		 //System.out.println(queryString);
-	 	      TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
-	 		  TupleQueryResult res = tupleQuery.evaluate();
-	 		   while(res.hasNext())
-	 		   {
-	 			   types.add(res.next().getValue("type").toString());
-	 		   }
+			queryString = "SELECT DISTINCT ?type From <"+ namedGraph+"> \n"
+					+ "			WHERE { \n"
+					+ "            ?s a ?type"
+					+ "           }" ;
+		//System.out.println(queryString);
+		TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+		TupleQueryResult res = tupleQuery.evaluate();
+		while(res.hasNext())
+		{
+			types.add(res.next().getValue("type").toString());
+		}
 		return types;
 	}
 }
