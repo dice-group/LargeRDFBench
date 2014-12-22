@@ -42,7 +42,7 @@ Please first read BigRDFBench paper to understand these query features.
 Put all of your benchmark queries in a folder (one query per file). Query Features for all of the queries can be printed as follow. 
 
 {{{
-String inputDir= "../BigRDFBench-Utilities/queries/";
+String inputDir= "../BigRDFBench-Utilities/queries/"; // mind the last /
 File folder = new File(inputDir);
 File[] listOfFiles = folder.listFiles();
 long count = 1; 
