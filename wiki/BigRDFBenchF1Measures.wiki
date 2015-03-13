@@ -1,11 +1,11 @@
 #summary How to calculate Precision, Recall, and F1 scores for a qiven SPARQL query?
 
-This page provides details about how one can use the BigRDFBench java utility to calculate Precision, Recall, and F1 scores for a qiven SPARQL query. The main aim of this utility is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given SPARQL query. First, we explain how this utility can be used with BigRDFBench, followed by the details how one can use it for any other benchmark. 
+This page provides details about how one can use the LargeRDFBench java utility to calculate Precision, Recall, and F1 scores for a qiven SPARQL query. The main aim of this utility is to measure the completeness and correctness of results retrieved by the underlying federation engine for a given SPARQL query. First, we explain how this utility can be used with BigRDFBench, followed by the details how one can use it for any other benchmark. 
 
- === Using with BigRDFBench ===
+ === Using with LargeRDFBench ===
 
- # Download the Java [http://goo.gl/8ql1UA BigRDFBench_Util.jar] and include into the underlying federation engine jar libraries. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
- # Download the BigRDFBench actual queries [http://goo.gl/8tX1Pa results] folder and store in your computer.
+ # Download the Java [http://goo.gl/8ql1UA LargeRDFBench_Util.jar] and include into the underlying federation engine jar libraries. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
+ # Download the LargeRDFBench actual queries [http://goo.gl/8tX1Pa results] folder and store in your computer.
  # You can compute the Precision, Recall, and F1 score by calling the function 
 
 {{{
@@ -22,7 +22,7 @@ OR
 StatsGenerator.getMissingResults(String queryAcutalResultsFile, ArrayList<String> currentQueryResults). 
 }}}
 
-A sample code (FedX based) for retrieving the Precision, Recall and F1 scores of BigRDFBench query no S2 is given below. 
+A sample code (FedX based) for retrieving the Precision, Recall and F1 scores of LargeRDFBench query no S2 is given below. 
 			
 {{{
 String S2 = "SELECT ?party ?page  WHERE {  <http://dbpedia.org/resource/Barack_Obama> 
