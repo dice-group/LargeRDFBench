@@ -1,6 +1,6 @@
 #summary How to calculate various measures of benchmark datasets and queries?
 
-For all of the given dataset and query features, you first need to download the Java [http://goo.gl/8ql1UA BigRDFBench_Util.jar] and include into the java project. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
+For all of the given dataset and query features, you first need to download the Java [http://goo.gl/8ql1UA LargeRDFBench_Util.jar] and include into the java project. The complete source code for this tool can also be checkout from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. 
 
 == Dataset Structuredness ==
 
@@ -34,15 +34,15 @@ Overall Structuredness or Coherence: 0.506684470477653
 }}}
 
 The details about coverage and weighted coverage can be found in Duan et al. paper. 
-<font color="red"> The complete structuredness and type coverage results for all of the BigRDFBench datasets is given [http://goo.gl/XpSSPN here] </font>
+<font color="red"> The complete structuredness and type coverage results for all of the LargeRDFBench datasets is given [http://goo.gl/XpSSPN here] </font>
 
 == Query Features ==
-Please first read BigRDFBench paper to understand these query features. 
+Please first read LargeRDFBench paper to understand these query features. 
 
 Put all of your benchmark queries in a folder (one query per file). Query Features for all of the queries can be printed as follow. 
 
 {{{
-String inputDir= "../BigRDFBench-Utilities/queries/"; // mind the last /
+String inputDir= "../LargeRDFBench-Utilities/queries/"; // mind the last /
 File folder = new File(inputDir);
 File[] listOfFiles = folder.listFiles();
 long count = 1; 
@@ -86,7 +86,7 @@ Mean Join Vertices Degree: 3.0
 --------------------------------------------------------------
 }}}
 <font color="red">
-A complete list of query features for all of the BigRDFBench queries can be found [http://goo.gl/eeW5W0 here]</font>
+A complete list of query features for all of the LargeRDFBench queries can be found [http://goo.gl/eeW5W0 here]</font>
 
 == Triple Patterns Selectivities ==
 Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfbench.googlecode.com/svn/trunk/. Set the following required information in the org.aksw.simba.bigrdfbench.util.selectivity class.
@@ -115,9 +115,9 @@ Please checkout the BigRDF Utilities source code  from SVN link http://bigrdfben
 
 Then run the following code. 
 {{{
-                loadStatementFilters("../BigRDFBench-Utilities/queryfilters/stp.txt");
-		loadEPtoRSfromFile("../BigRDFBench-Utilities/datasetsizes/sizes.txt");
-		String inputDir= "../BigRDFBench-Utilities/queries/";
+                loadStatementFilters("../LargeRDFBench-Utilities/queryfilters/stp.txt");
+		loadEPtoRSfromFile("../LargeRDFBench-Utilities/datasetsizes/sizes.txt");
+		String inputDir= "../LargeRDFBench-Utilities/queries/";
 		File folder = new File(inputDir);
 		File[] listOfFiles = folder.listFiles();
 		long count = 1; 
@@ -160,4 +160,4 @@ Query Selectivities standard deviation: 0.5773488892379413
 Triple Patterns: 3
 }}}
 <font color="red">
-The mean triple pattern selectivities along with complete details, for all of the BigRDFBench queries can be found [http://goo.gl/fDNXj9 here] </font> 
+The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [http://goo.gl/fDNXj9 here] </font> 
