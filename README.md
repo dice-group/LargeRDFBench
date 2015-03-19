@@ -6,7 +6,7 @@ LargeRDFBench: A Billion Triples Benchmark for SPARQL Query Federation
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
 
 
-=== Benchmark Datasets Statistics ===
+# Benchmark Datasets Statistics
 
 In the following we provide information about the datasets used in LargeRDFBench along with download links, both for data-dumps and Virtuso-7.10 SPARQL endpoints. 
 
