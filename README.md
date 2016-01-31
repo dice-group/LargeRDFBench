@@ -3,6 +3,7 @@
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
 
 | *Dataset* | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
+|-----------|------------|----------------------|------------------------|---------------------|------------|----------|-------------------------------|
 |LinkedTCGA-M|415030327|83006609|6|166106744|1|-|1|
 |LinkedTCGA-E|344576146|57429904|7|84403422 |1|-|1|
 |LinkedTCGA-A|35329868|5782962|383|8329393|23|251.3k|0.998|
