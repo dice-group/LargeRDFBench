@@ -166,7 +166,7 @@ LargeRDFBench makes use of 6 -- #ASK, #TP. Sources, Source selection time, Query
 
 ###Evaluation Results and Runtime Errors
  
-We have compared 5 - [https://www.mpi-inf.mpg.de/~khose/publications/ISWC2011.pdf FedX], [http://ceur-ws.org/Vol-782/GoerlitzAndStaab_COLD2011.pdf SPLENDID], [http://link.springer.com/chapter/10.1007%2F978-3-642-25073-6_2#page-1 ANAPSID], [http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf FedX+HiBISCuS], [http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf SPLENDID+HiBISUCuS] - state-of-the-art SPARQL endpoint federation systems with LargeRDFBench. Our complete evaluation results can be downloaded from [http://goo.gl/d7LxPN  here] and the runtime errors thrown by the federation systems can be downloaded from [https://drive.google.com/file/d/0BzemFAUFXpqOUUtvTDBUR2JMUms/edit?usp=sharing here]. 
+We have compared 5 - [FedX](https://www.mpi-inf.mpg.de/~khose/publications/ISWC2011.pdf ), [SPLENDID](http://ceur-ws.org/Vol-782/GoerlitzAndStaab_COLD2011.pdf ), [ANAPSID](http://link.springer.com/chapter/10.1007%2F978-3-642-25073-6_2#page-1 ), [FedX+HiBISCuS](http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf ), [SPLENDID+HiBISUCuS](http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf) - state-of-the-art SPARQL endpoint federation systems with LargeRDFBench. Our complete evaluation results can be downloaded from [here](http://goo.gl/d7LxPN ) and the runtime errors thrown by the federation systems can be downloaded from [here](https://drive.google.com/file/d/0BzemFAUFXpqOUUtvTDBUR2JMUms/edit?usp=sharing ). 
  
 
 ###SPARQL Endpoints Specifications
@@ -192,6 +192,6 @@ https://sites.google.com/site/saleemsweb/home/sparqlspecs.png
 We are especially thankful to Helena Deus (Foundations Medicine,  Cambridge, MA, USA) and Shanmukha Sampath (Democritus University of Thrace, Alexandroupoli, Greece) 
 for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations. 	
 
-<g:plusone size="large"></g:plusone> 	
+	
 
 			
