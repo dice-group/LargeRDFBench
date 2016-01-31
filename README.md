@@ -57,7 +57,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ![](https://sites.google.com/site/saleemsweb/home/connectivity.png)
 
-### Benchmark Queries ===
+### Benchmark Queries 
 
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [https://code.google.com/p/fbench/ FedBench]), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]). The queries full results can be downloaded from [http://goo.gl/8tX1Pa here].
 
@@ -172,7 +172,7 @@ We have compared 5 - [FedX](https://www.mpi-inf.mpg.de/~khose/publications/ISWC2
 ###SPARQL Endpoints Specifications
 Following are the specifications of the machines used in the evaluation to host SPARQL endpoints. 
 
-https://sites.google.com/site/saleemsweb/home/sparqlspecs.png
+![](https://sites.google.com/site/saleemsweb/home/sparqlspecs.png)
 
 
 
