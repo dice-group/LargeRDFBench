@@ -53,11 +53,11 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 | [Semantic Web Dog Food](http://data.semanticweb.org/) |[Download] (https://drive.google.com/file/d/0B1tUDhWNTjO-RjBWZXYyX2FDT1E/edit?usp=sharing/ )| [Download](https://drive.google.com/file/d/0B1tUDhWNTjO-c2h4al9VREF6bDg/edit?usp=sharing/ ) | [Download](https://drive.google.com/file/d/0B1tUDhWNTjO-UW5HaF9rekdialU/edit?usp=sharing/ ) |your.system.ip.address:8898/sparql | http://data.semanticweb.org/sparql|
 | [Affymetrix](http://download.bio2rdf.org/release/2/affymetrix/affymetrix.html)| [Download](https://drive.google.com/file/d/0B1tUDhWNTjO-eHVlZ1RyVVFJQU0/edit?usp=sharing/ )| [ Download](https://drive.google.com/file/d/0B1tUDhWNTjO-RnV4SWtKelJTb0U/edit?usp=sharing/)|[Download](https://drive.google.com/file/d/0B1tUDhWNTjO-Tm9oazNUdV9Cb1k/edit?usp=sharing )|your.system.ip.address:8899/sparql |http://cu.affymetrix.bio2rdf.org/sparql |
 
-### Datasets Connectivity ===
+### Datasets Connectivity
 
 https://sites.google.com/site/saleemsweb/home/connectivity.png
 
-=== Benchmark Queries ===
+### Benchmark Queries ===
 
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [https://code.google.com/p/fbench/ FedBench]), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]). The queries full results can be downloaded from [http://goo.gl/8tX1Pa here].
 
@@ -107,11 +107,11 @@ The LargeRDFBench java utility to calculate all these queries features can be fo
 
 In the following we explain how one can setup the LargeRDFBench evaluation framework and measure the performance of the federation engine. 
 
-==== SPARQL Endpoints Setup ====
+### SPARQL Endpoints Setup 
  # The first step is to download the SPARQL endpoints (portable Virtuoso SAPRQL endpoints from second table above) on different machines, i.e., computers. Best would be one SPARQL endpoint per machine. Therefore, you need a total of 13 machines. However, you can start more than one SPARQL endpoints per machine. 
  # The next step is to start the SPARQL endpoint from bin/start.bat (for windows) or bin/start_virtuoso.sh (for Linux). Make a list of the 13 SPARQL endpoints URL's ( required as input for index-free SPARQL query federation engines, i.e., FedX). It is important to note that index-assisted federation engines (e.g., SPLENDID, DARQ, ANAPSID) usually stores the endpoint URL's in its index. The local SPARQL endpoints URL's are given above in second table. 
 
-==== Running SPARQL Queries ====
+### Running SPARQL Queries 
 Provides the list of SPARQL endpoints URL's, and a LargeRDFBench query to the underlying federation engine as input and calculate the LargeRDFBench metrics (explained next). The query evaluation start-up files for the selected systems (which you can checkout from https://bigrdfbench.googlecode.com/svn/trunk/) are given below. 
 
 ----------FedX-original-----------------------
@@ -158,36 +158,36 @@ grant execute on "DB.DBA.SPARQL_SINV_IMP" to "SPARQL"; </font>
 You should be able to run all of the benchmark SPARQL 1.1 queries by using online virtuoso online query interface. Please dont set the default named graph at virtuoso online query interface, otherwise, you may get no results. 
 
 
-==== How to calculate LargeRDFBench metrics? ====
+#### How to calculate LargeRDFBench metrics? 
 LargeRDFBench makes use of 6 -- #ASK, #TP. Sources, Source selection time, Query runtime, Results completeness, Results correctness -- main metrics (See paper for details). The first 4 can directly be computed from the source code (checkout the selected systems to see how we calculated these 4 metrics) of the underlying federation engine.  While for the later 2, we provided a  [http://goo.gl/rO2yvb java tool] which computes the precision, recall, F1-score of the results retrieved by the federation engine for a given benchmark query. 
 
 
 
 
-===Evaluation Results and Runtime Errors===
+###Evaluation Results and Runtime Errors
  
 We have compared 5 - [https://www.mpi-inf.mpg.de/~khose/publications/ISWC2011.pdf FedX], [http://ceur-ws.org/Vol-782/GoerlitzAndStaab_COLD2011.pdf SPLENDID], [http://link.springer.com/chapter/10.1007%2F978-3-642-25073-6_2#page-1 ANAPSID], [http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf FedX+HiBISCuS], [http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf SPLENDID+HiBISUCuS] - state-of-the-art SPARQL endpoint federation systems with LargeRDFBench. Our complete evaluation results can be downloaded from [http://goo.gl/d7LxPN  here] and the runtime errors thrown by the federation systems can be downloaded from [https://drive.google.com/file/d/0BzemFAUFXpqOUUtvTDBUR2JMUms/edit?usp=sharing here]. 
  
 
-===SPARQL Endpoints Specifications===
+###SPARQL Endpoints Specifications
 Following are the specifications of the machines used in the evaluation to host SPARQL endpoints. 
 
 https://sites.google.com/site/saleemsweb/home/sparqlspecs.png
 
 
 
-===Benchmark Contributors===
+###Benchmark Contributors
 
-  * [https://sites.google.com/site/saleemsweb/ Muhammad Saleem] (AKSW, University of Leipzig) 
-  * [https://www.deri.ie/users/ali-hasnain/ Ali Hasnain] (INSIGHT @ NUI Galway)
-  * [http://aksw.org/AxelNgonga.html Axel-Cyrille Ngonga Ngomo] (AKSW, University of Leipzig)
-  * [http://www.deri.ie/users/aftab-iqbal/ Aftab Iqbal] (INSIGHT @ NUI Galway)
-  * [http://ts-eurotrain.eu/index.php/training-programme/fellows/sampath Shanmukha Sampath] (Democritus University of Thrace, Alexandroupoli, Greece)
-  * [https://sites.google.com/a/mathbiol.org/badeiriabho/ Bade Iriabho] (University of Alabama at Birmingham)
-  * [http://jonasalmeida.info/ Jonas S. Almeida] (University of Alabama at Birmingham)
-  * [http://lenadeus.info/ Helena F. Deus] (Foundation Medicine)
-  * [http://csarven.ca Sarven Capadisli ]
-  * [http://maulik-kamdar.com/ Maulik Kamdar] (Standford University)
+  * [ Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
+  * [Ali Hasnain] (https://www.deri.ie/users/ali-hasnain/)(INSIGHT @ NUI Galway)
+  *  Axel-Cyrille Ngonga Ngomo]([http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
+  * [Aftab Iqbal] (http://www.deri.ie/users/aftab-iqbal/ )(INSIGHT @ NUI Galway)
+  * [ Shanmukha Sampath](http://ts-eurotrain.eu/index.php/training-programme/fellows/sampath) (Democritus University of Thrace, Alexandroupoli, Greece)
+  * [Bade Iriabho] (https://sites.google.com/a/mathbiol.org/badeiriabho/ )(University of Alabama at Birmingham)
+  * [ Jonas S. Almeida](http://jonasalmeida.info/) (University of Alabama at Birmingham)
+  * [ Helena F. Deus](http://lenadeus.info/) (Foundation Medicine)
+  * [Sarven Capadisli ](http://csarven.ca )
+  * [ Maulik Kamdar](http://maulik-kamdar.com/) (Standford University)
  
 We are especially thankful to Helena Deus (Foundations Medicine,  Cambridge, MA, USA) and Shanmukha Sampath (Democritus University of Thrace, Alexandroupoli, Greece) 
 for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations. 	
