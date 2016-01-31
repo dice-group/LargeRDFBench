@@ -180,7 +180,7 @@ Following are the specifications of the machines used in the evaluation to host 
 
   * [ Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Ali Hasnain] (https://www.deri.ie/users/ali-hasnain/)(INSIGHT @ NUI Galway)
-  *  Axel-Cyrille Ngonga Ngomo]([http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
+  *  [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
   * [Aftab Iqbal] (http://www.deri.ie/users/aftab-iqbal/ )(INSIGHT @ NUI Galway)
   * [ Shanmukha Sampath](http://ts-eurotrain.eu/index.php/training-programme/fellows/sampath) (Democritus University of Thrace, Alexandroupoli, Greece)
   * [Bade Iriabho] (https://sites.google.com/a/mathbiol.org/badeiriabho/ )(University of Alabama at Birmingham)
