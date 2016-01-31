@@ -2,7 +2,21 @@
 
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
 
-
+| *Dataset* | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
+|LinkedTCGA-M|415030327|83006609|6|166106744|1|-|1|
+|LinkedTCGA-E|344576146|57429904|7|84403422 |1|-|1|
+|LinkedTCGA-A|35329868|5782962|383|8329393|23|251.3k|0.998|
+|ChEBI|4772706|50477|28|772138 |1|-| 0.340|
+|DBPedia-Subset|42849609|9495865|1063|13620028|248|65.8k|0.196|
+|DrugBank|517023|19693|119|276142 |8|10.8k|0.726|
+|Geo Names|107950085|7479714|26|35799392|1|118k|0.518|
+|Jamendo|1049647|335925|26|440686 |11|1.7k|0.961|
+|KEGG|1090830|34260|21|939258 |4|1.3k|0.919|
+|Linked MDB|6147996|694400|222|2052959 |53|63.1k |0.729|
+|New York Times|335198|21666|36|191538|2|31.7k|0.731|
+|Semantic Web Dog Food|103595|11974|118|37547|103|2.3k|0.426|
+|Affymetrix|44207146|1421763|105|13240270|3|246.3k|0.506|
+| *Total* | *1003960176* | *165785212* | *2160* | *326209517* | *459* | *792.3k* | *Avg. 0.696*|
 
 # Benchmark Datasets Statistics
 
