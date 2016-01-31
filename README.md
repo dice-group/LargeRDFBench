@@ -61,6 +61,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ).
 
+|<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
 | *Query*  | *Query Type* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
 | --- | --- | ---| --- | --- | --- |---- | ---- | ---- |
@@ -103,7 +104,6 @@ The LargeRDFBench java utility to calculate all these queries features can be fo
 
 ### Usage Information
 
-|<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
 In the following we explain how one can setup the LargeRDFBench evaluation framework and measure the performance of the federation engine. 
 
@@ -159,7 +159,7 @@ You should be able to run all of the benchmark SPARQL 1.1 queries by using onlin
 
 
 #### How to calculate LargeRDFBench metrics? 
-LargeRDFBench makes use of 6 -- #ASK, #TP. Sources, Source selection time, Query runtime, Results completeness, Results correctness -- main metrics (See paper for details). The first 4 can directly be computed from the source code (checkout the selected systems to see how we calculated these 4 metrics) of the underlying federation engine.  While for the later 2, we provided a  [http://goo.gl/rO2yvb java tool] which computes the precision, recall, F1-score of the results retrieved by the federation engine for a given benchmark query. 
+LargeRDFBench makes use of 6 -- #ASK, #TP. Sources, Source selection time, Query runtime, Results completeness, Results correctness -- main metrics (See paper for details). The first 4 can directly be computed from the source code (checkout the selected systems to see how we calculated these 4 metrics) of the underlying federation engine.  While for the later 2, we provided a  [ java tool](http://goo.gl/rO2yvb) which computes the precision, recall, F1-score of the results retrieved by the federation engine for a given benchmark query. 
 
 
 
