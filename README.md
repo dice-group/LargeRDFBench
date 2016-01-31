@@ -2,32 +2,13 @@
 
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
 
-| *Dataset*   | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
-|-------------|------------|----------------------|------------------------|---------------------|------------|----------|-------------------------------|
-|LinkedTCGA-M|415030327|83006609|6|166106744|1|-|1|
-|LinkedTCGA-E|344576146|57429904|7|84403422 |1|-|1|
-|LinkedTCGA-A|35329868|5782962|383|8329393|23|251.3k|0.998|
-|ChEBI|4772706|50477|28|772138 |1|-| 0.340|
-|DBPedia-Subset|42849609|9495865|1063|13620028|248|65.8k|0.196|
-|DrugBank|517023|19693|119|276142 |8|10.8k|0.726|
-|Geo Names|107950085|7479714|26|35799392|1|118k|0.518|
-|Jamendo|1049647|335925|26|440686 |11|1.7k|0.961|
-|KEGG|1090830|34260|21|939258 |4|1.3k|0.919|
-|Linked MDB|6147996|694400|222|2052959 |53|63.1k |0.729|
-|New York Times|335198|21666|36|191538|2|31.7k|0.731|
-|Semantic Web Dog Food|103595|11974|118|37547|103|2.3k|0.426|
-|Affymetrix|44207146|1421763|105|13240270|3|246.3k|0.506|
-| *Total* | *1003960176* | *165785212* | *2160* | *326209517* | *459* | *792.3k* | *Avg. 0.696*|
 
-# Benchmark Datasets Statistics
+
+### Benchmark Datasets Statistics
 
 In the following we provide information about the datasets used in LargeRDFBench along with download links, both for data-dumps and Virtuso-7.10 SPARQL endpoints. 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| *Dataset* | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
+| *Dataset*   | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
+|-------------|------------|----------------------|------------------------|---------------------|------------|----------|-------------------------------|
 |LinkedTCGA-M|415030327|83006609|6|166106744|1|-|1|
 |LinkedTCGA-E|344576146|57429904|7|84403422 |1|-|1|
 |LinkedTCGA-A|35329868|5782962|383|8329393|23|251.3k|0.998|
@@ -50,7 +31,7 @@ types set. They show that artificial datasets are typically highly structured an
 <font color="red">
 The complete details along with type coverages can be found [http://goo.gl/XpSSPN here].  The LargeRDFBench java utility to calculate the dataset structuredness can be found [http://goo.gl/TgVg2G here] along with usage examples. </font>
 
-=== Datasets Availability ===
+###Datasets Availability 
 
 All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded from the links given below. For SPARQL endpoint federation systems, we strongly recommend to directly download the endpoints as some of the datadumps are quite big and require a lot of upload time. You may start a SPARQL endpoint from bin/start.bat (for windows) and bin/start_virtuoso.sh (for linux). Please note that LinkedTCGA-M(Mehtylation), LinkedTCGA-E(Exon),  LinkedTCGA-A(All others), and DBpedia-subset are subsets of the live SPARQL endpoints. Further, the TCGA live SPARQL endpoints are not aligned with Affymetrix, Drugbank, and DBpedia. 
 
@@ -69,7 +50,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 || [http://data.semanticweb.org/ Semantic Web Dog Food] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-RjBWZXYyX2FDT1E/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-c2h4al9VREF6bDg/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-UW5HaF9rekdialU/edit?usp=sharing/ Download] ||your.system.ip.address:8898/sparql || http://data.semanticweb.org/sparql||
 || [http://download.bio2rdf.org/release/2/affymetrix/affymetrix.html Affymetrix]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-eHVlZ1RyVVFJQU0/edit?usp=sharing/ Download]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-RnV4SWtKelJTb0U/edit?usp=sharing/ Download]||[https://drive.google.com/file/d/0B1tUDhWNTjO-Tm9oazNUdV9Cb1k/edit?usp=sharing Download]||your.system.ip.address:8899/sparql ||http://cu.affymetrix.bio2rdf.org/sparql ||
 
-=== Datasets Connectivity ===
+### Datasets Connectivity ===
 
 https://sites.google.com/site/saleemsweb/home/connectivity.png
 
