@@ -55,7 +55,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ### Datasets Connectivity
 
-https://sites.google.com/site/saleemsweb/home/connectivity.png
+![](https://sites.google.com/site/saleemsweb/home/connectivity.png)
 
 ### Benchmark Queries ===
 
