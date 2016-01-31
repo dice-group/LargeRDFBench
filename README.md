@@ -39,19 +39,19 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 | *Dataset*  | *Data-dump*  | *Windows Endpoint*  | *Linux Endpoint*  | *Local Endpoint Url*  | *Live Endpoint Url*|
 |------------|--------------|---------------------|-------------------|-----------------------|--------------------|
-|| [http://tcga.deri.ie/ LinkedTCGA-M] ||[https://drive.google.com/file/d/0B_MUFqryVpByQ0J2NFAtNVlzMUk/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B_MUFqryVpByNDRLQkhucXE2U00/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-ako3bHhwY0lVTm8/edit?usp=sharing/ Download] || your.system.ip.address:8887/sparql ||http://digital3.path.uab.edu/sparql ||
-|| [http://tcga.deri.ie/ LinkedTCGA-E] ||[https://drive.google.com/file/d/0B_MUFqryVpByOGdJWU8xNXR0aUE/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B_MUFqryVpByNjd4TjVGS1dRbnc/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-RE5FaHp1eXFSenM/edit?usp=sharing/ Download] || your.system.ip.address:8888/sparql || http://digital2.path.uab.edu/sparql||
-|| [http://tcga.deri.ie/ LinkedTCGA-A] ||[https://drive.google.com/file/d/0B_MUFqryVpByd2FVQ2gzOXhIemc/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B_MUFqryVpBydUpVWjBMX2FGNEE/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B_MUFqryVpByYXdtbGhNYjdCZ3M/edit?usp=sharing/ Download] ||your.system.ip.address:8889/sparql || http://digital.path.uab.edu/sparql||
-|| [https://www.ebi.ac.uk/chebi/ ChEBI] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-Vk81dGVkNVNuY1E/edit?usp=sharing/ Download]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-TUR6RF9jX2xoMFU/edit?usp=sharing/ Download]||[https://drive.google.com/file/d/0B1tUDhWNTjO-Wk5LeHBzMUd3VHc/edit?usp=sharing Download]||your.system.ip.address:8890/sparql || http://chebi.bio2rdf.org/sparql ||
-|| [http://DBpedia.org/ DBPedia-Subset]||[https://drive.google.com/file/d/0B1tUDhWNTjO-QWk5MVJud3cxUXM/edit?usp=sharing/ Download]||  [https://drive.google.com/file/d/0B1tUDhWNTjO-WjNkZEZrTTZzbW8/edit?usp=sharing/ Download]||[https://drive.google.com/file/d/0B1tUDhWNTjO-OEgyXzBUVmlMQlk/edit?usp=sharing Download]||your.system.ip.address:8891/sparql ||http://dbpedia.org/sparql ||
-|| [http://www.drugbank.ca/ DrugBank]||[https://drive.google.com/file/d/0B1tUDhWNTjO-cVp5QV9VUWRuYkk/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-QmMyOE9RWV9oNHM/edit?usp=sharing/ Download]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-U0V5Y0xDWXhzam8/edit?usp=sharing/ Download]||your.system.ip.address:8892/sparql || http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql||
-|| [http://www.geonames.org/ Geo Names]||[https://drive.google.com/file/d/0B1tUDhWNTjO-WEZZb2VwOG5vZkU/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-VC1HWmhBMlFncWc/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B_MUFqryVpByd3hJcHBPeHZhejA/edit?usp=sharing/ Download] ||your.system.ip.address:8893/sparql || http://factforge.net/sparql||
-|| [http://dbtune.org/jamendo/ Jamendo] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-cWpmMWxxQ3Z2eVk/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-YXV6U0ZzLUF0S0k/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-V3JMZjdfRkZxLUU/edit?usp=sharing/ Download] ||your.system.ip.address:8894/sparql  || http://dbtune.org/jamendo/sparql/||
-|| [http://www.genome.jp/kegg/ KEGG] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-TUdUcllRMGVJaHM/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-c1BNQ0dVWTVkUEU/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-R1dKbDlHNXZ6blk/edit?usp=sharing/ Download] ||your.system.ip.address:8895/sparql ||http://cu.kegg.bio2rdf.org/sparql ||
-|| [http://linkedmdb.org/ Linked MDB] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-bU5VN25NLXZXU0U/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-eXpVSjd2Y25PaVk/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-NjVTVERvajJUcGc/edit?usp=sharing/ Download] ||your.system.ip.address:8896/sparql ||http://www.linkedmdb.org/sparql ||
-|| [http://data.nytimes.com/ New York Times] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-dThoTm9DSmY4Wms/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-VDhmNWJmZVcybm8/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-RG9GeVdxbDR4YjQ/edit?usp=sharing/ Download] ||your.system.ip.address:8897/sparql || - ||
-|| [http://data.semanticweb.org/ Semantic Web Dog Food] ||[https://drive.google.com/file/d/0B1tUDhWNTjO-RjBWZXYyX2FDT1E/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-c2h4al9VREF6bDg/edit?usp=sharing/ Download] || [https://drive.google.com/file/d/0B1tUDhWNTjO-UW5HaF9rekdialU/edit?usp=sharing/ Download] ||your.system.ip.address:8898/sparql || http://data.semanticweb.org/sparql||
-|| [http://download.bio2rdf.org/release/2/affymetrix/affymetrix.html Affymetrix]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-eHVlZ1RyVVFJQU0/edit?usp=sharing/ Download]|| [https://drive.google.com/file/d/0B1tUDhWNTjO-RnV4SWtKelJTb0U/edit?usp=sharing/ Download]||[https://drive.google.com/file/d/0B1tUDhWNTjO-Tm9oazNUdV9Cb1k/edit?usp=sharing Download]||your.system.ip.address:8899/sparql ||http://cu.affymetrix.bio2rdf.org/sparql ||
+| [http://tcga.deri.ie/ LinkedTCGA-M] |[https://drive.google.com/file/d/0B_MUFqryVpByQ0J2NFAtNVlzMUk/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B_MUFqryVpByNDRLQkhucXE2U00/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-ako3bHhwY0lVTm8/edit?usp=sharing/ Download] | your.system.ip.address:8887/sparql |http://digital3.path.uab.edu/sparql |
+| [http://tcga.deri.ie/ LinkedTCGA-E] |[https://drive.google.com/file/d/0B_MUFqryVpByOGdJWU8xNXR0aUE/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B_MUFqryVpByNjd4TjVGS1dRbnc/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-RE5FaHp1eXFSenM/edit?usp=sharing/ Download] | your.system.ip.address:8888/sparql | http://digital2.path.uab.edu/sparql|
+| [http://tcga.deri.ie/ LinkedTCGA-A] |[https://drive.google.com/file/d/0B_MUFqryVpByd2FVQ2gzOXhIemc/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B_MUFqryVpBydUpVWjBMX2FGNEE/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B_MUFqryVpByYXdtbGhNYjdCZ3M/edit?usp=sharing/ Download] |your.system.ip.address:8889/sparql | http://digital.path.uab.edu/sparql|
+| [https://www.ebi.ac.uk/chebi/ ChEBI] |[https://drive.google.com/file/d/0B1tUDhWNTjO-Vk81dGVkNVNuY1E/edit?usp=sharing/ Download]| [https://drive.google.com/file/d/0B1tUDhWNTjO-TUR6RF9jX2xoMFU/edit?usp=sharing/ Download]|[https://drive.google.com/file/d/0B1tUDhWNTjO-Wk5LeHBzMUd3VHc/edit?usp=sharing Download]|your.system.ip.address:8890/sparql | http://chebi.bio2rdf.org/sparql |
+| [http://DBpedia.org/ DBPedia-Subset]|[https://drive.google.com/file/d/0B1tUDhWNTjO-QWk5MVJud3cxUXM/edit?usp=sharing/ Download]|  [https://drive.google.com/file/d/0B1tUDhWNTjO-WjNkZEZrTTZzbW8/edit?usp=sharing/ Download]|[https://drive.google.com/file/d/0B1tUDhWNTjO-OEgyXzBUVmlMQlk/edit?usp=sharing Download]|your.system.ip.address:8891/sparql |http://dbpedia.org/sparql |
+| [http://www.drugbank.ca/ DrugBank]|[https://drive.google.com/file/d/0B1tUDhWNTjO-cVp5QV9VUWRuYkk/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-QmMyOE9RWV9oNHM/edit?usp=sharing/ Download]| [https://drive.google.com/file/d/0B1tUDhWNTjO-U0V5Y0xDWXhzam8/edit?usp=sharing/ Download]|your.system.ip.address:8892/sparql | http://wifo5-04.informatik.uni-mannheim.de/drugbank/sparql|
+| [http://www.geonames.org/ Geo Names]|[https://drive.google.com/file/d/0B1tUDhWNTjO-WEZZb2VwOG5vZkU/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-VC1HWmhBMlFncWc/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B_MUFqryVpByd3hJcHBPeHZhejA/edit?usp=sharing/ Download] |your.system.ip.address:8893/sparql | http://factforge.net/sparql|
+| [http://dbtune.org/jamendo/ Jamendo] |[https://drive.google.com/file/d/0B1tUDhWNTjO-cWpmMWxxQ3Z2eVk/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-YXV6U0ZzLUF0S0k/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-V3JMZjdfRkZxLUU/edit?usp=sharing/ Download] |your.system.ip.address:8894/sparql  | http://dbtune.org/jamendo/sparql/|
+| [http://www.genome.jp/kegg/ KEGG] |[https://drive.google.com/file/d/0B1tUDhWNTjO-TUdUcllRMGVJaHM/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-c1BNQ0dVWTVkUEU/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-R1dKbDlHNXZ6blk/edit?usp=sharing/ Download] |your.system.ip.address:8895/sparql |http://cu.kegg.bio2rdf.org/sparql |
+| [http://linkedmdb.org/ Linked MDB] |[https://drive.google.com/file/d/0B1tUDhWNTjO-bU5VN25NLXZXU0U/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-eXpVSjd2Y25PaVk/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-NjVTVERvajJUcGc/edit?usp=sharing/ Download] |your.system.ip.address:8896/sparql |http://www.linkedmdb.org/sparql |
+| [http://data.nytimes.com/ New York Times] |[https://drive.google.com/file/d/0B1tUDhWNTjO-dThoTm9DSmY4Wms/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-VDhmNWJmZVcybm8/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-RG9GeVdxbDR4YjQ/edit?usp=sharing/ Download] |your.system.ip.address:8897/sparql | - |
+| [http://data.semanticweb.org/ Semantic Web Dog Food] |[https://drive.google.com/file/d/0B1tUDhWNTjO-RjBWZXYyX2FDT1E/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-c2h4al9VREF6bDg/edit?usp=sharing/ Download] | [https://drive.google.com/file/d/0B1tUDhWNTjO-UW5HaF9rekdialU/edit?usp=sharing/ Download] |your.system.ip.address:8898/sparql | http://data.semanticweb.org/sparql|
+| [http://download.bio2rdf.org/release/2/affymetrix/affymetrix.html Affymetrix]| [https://drive.google.com/file/d/0B1tUDhWNTjO-eHVlZ1RyVVFJQU0/edit?usp=sharing/ Download]| [https://drive.google.com/file/d/0B1tUDhWNTjO-RnV4SWtKelJTb0U/edit?usp=sharing/ Download]|[https://drive.google.com/file/d/0B1tUDhWNTjO-Tm9oazNUdV9Cb1k/edit?usp=sharing Download]|your.system.ip.address:8899/sparql |http://cu.affymetrix.bio2rdf.org/sparql |
 
 ### Datasets Connectivity ===
 
@@ -61,40 +61,40 @@ https://sites.google.com/site/saleemsweb/home/connectivity.png
 
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [https://code.google.com/p/fbench/ FedBench]), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]). The queries full results can be downloaded from [http://goo.gl/8tX1Pa here].
 
-||<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]), Complete Queries [http://goo.gl/8tX1Pa Results] ||
-|| *Query*  || *Query Type* || *#Triple Patterns* || *#Sources Span* || *#Results* ||  *#Join Vertices* || *Mean Join Vertex Degree* || *Mean Triple Pattern Selectivity* ||  *Used SPARQL Clauses* ||  
-|| S1 || Simple || 3 || 2 || 90 || 1 || 2 || 0.333334927 || UNION ||
-|| S2 || Simple || 3 || 2 || 1 || 2  ||2||0.007391659|| X ||
-|| S3 || Simple || 5 || 5 || 2 || 2  ||3||0.008889571|| X  ||
-|| S4 || Simple || 5 || 5 || 1 || 5  ||2||0.019295158||X||
-|| S5 || Simple || 4 || 5 || 2 || 3  ||2||0.006169376||X||
-|| S6 || Simple || 4 || 4 || 11 || 3 ||2||0.019395937||X||
-|| S7 || Simple || 4 || 5 || 1 || 3  ||2||0.020198747||X||
-|| S8 || Simple || 2 || 2 || 1159 ||0||NA||0.00112084|| UNION||
-|| S9 || Simple || 3 || 4 || 333 ||1 ||2||0.3335448|| UNION||
-|| S10 || Simple || 5 || 2 || 9054 ||3 ||2.33||0.016010968||X||
-|| S11 || Simple || 7 || 2 || 3 || 4||2.5||0.006628492||X||
-|| S12 || Simple || 6 || 3 || 393 || 4||2.25||0.01217423||X||
-|| S13 || Simple || 5 || 3 || 28 || 3||2.33||0.014815076||X||
-|| S14 || Simple || 5 || 3 || 1620 || 3||2||0.012452045||OPTIONAL||
-|| C1 || Complex || 8 || 5 || 1000 || 4||2.5||0.010779222|| DISTINCT, FILTER, OPTIONAL, LIMIT ||
-|| C2 || Complex || 8 || 5 || 4 || 4||2.25||0.00972466|| OPTIONAL, FILTER||
-|| C3 || Complex || 8 || 3 || 9 || 4||2.25||0.020214493|| DISTINCT, OPTIONAL||
-|| C4 || Complex || 12 || 8 || 50 || 2||6||0.012412695|| DISTINCT, OPTIONAL, LIMIT||
-|| C5 || Complex || 8 || 8 || 500 || 5||2.4||0.018655228|| FILTER, LIMIT||
-|| C6 || Complex || 9 || 2 || 148 || 5||2.8||0.022971132|| ORDER BY||
-|| C7 || Complex || 9 || 2 || 112 || 6||2.33||0.014815749||DISTINCT, OPTIONAL||
-|| C8 || Complex || 11 || 3 || 3067 || 4||3.25||0.012449596||DISTINCT, OPTIONAL||
-|| C9 || Complex || 9 || 3|| 100 || 4||2.75||0.01107262|| OPTIONAL, ORDER BY, LIMIT||
-|| C10 || Complex || 10 || 3 || 102 || 5||2.8||0.002712048|| DISTINCT||
-|| L1 || Large Data || 6|| 3 || 227192|| 4||2||0.19222037|| UNION ||
-|| L2 || Large Data || 6 || 3 || 152899|| 2||3.5||0.286786739||DISTINCT, FILTER||
-|| L3 || Large Data || 7 || 3 || 257158 || 3||3||0.245822714|| FILTER, ORDER BY||
-|| L4 || Large Data || 8 || 4 || 397204|| 4||2.5||0.305675513||UNION, FILTER, REGEX||
-|| L5 || Large Data || 11 || 4 || 190575 || 5||3||0.485882296||FILTER||
-|| L6 || Large Data || 10 || 4 || 282154|| 5||2.8||0.349528975||FILTER, DISTINCT||
-|| L7 || Large Data || 5 || 4 || 80460 || 3||2.33||0.20069629||DISTINCT, FILTER||
-|| L8 || Large Data || 8 || 3 || 306705 || 4||2.5||0.278093563||UNION, FILTER||
+|<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]), Complete Queries [http://goo.gl/8tX1Pa Results] |
+| *Query*  | *Query Type* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* |  
+| S1 | Simple | 3 | 2 | 90 | 1 | 2 | 0.333334927 | UNION |
+| S2 | Simple | 3 | 2 | 1 | 2  |2|0.007391659| X |
+| S3 | Simple | 5 | 5 | 2 | 2  |3|0.008889571| X  |
+| S4 | Simple | 5 | 5 | 1 | 5  |2|0.019295158|X|
+| S5 | Simple | 4 | 5 | 2 | 3  |2|0.006169376|X|
+| S6 | Simple | 4 | 4 | 11 | 3 |2|0.019395937|X|
+| S7 | Simple | 4 | 5 | 1 | 3  |2|0.020198747|X|
+| S8 | Simple | 2 | 2 | 1159 |0|NA|0.00112084| UNION|
+| S9 | Simple | 3 | 4 | 333 |1 |2|0.3335448| UNION|
+| S10 | Simple | 5 | 2 | 9054 |3 |2.33|0.016010968|X|
+| S11 | Simple | 7 | 2 | 3 | 4|2.5|0.006628492|X|
+| S12 | Simple | 6 | 3 | 393 | 4|2.25|0.01217423|X|
+| S13 | Simple | 5 | 3 | 28 | 3|2.33|0.014815076|X|
+| S14 | Simple | 5 | 3 | 1620 | 3|2|0.012452045|OPTIONAL|
+| C1 | Complex | 8 | 5 | 1000 | 4|2.5|0.010779222| DISTINCT, FILTER, OPTIONAL, LIMIT |
+| C2 | Complex | 8 | 5 | 4 | 4|2.25|0.00972466| OPTIONAL, FILTER|
+| C3 | Complex | 8 | 3 | 9 | 4|2.25|0.020214493| DISTINCT, OPTIONAL|
+| C4 | Complex | 12 | 8 | 50 | 2|6|0.012412695| DISTINCT, OPTIONAL, LIMIT|
+| C5 | Complex | 8 | 8 | 500 | 5|2.4|0.018655228| FILTER, LIMIT|
+| C6 | Complex | 9 | 2 | 148 | 5|2.8|0.022971132| ORDER BY|
+| C7 | Complex | 9 | 2 | 112 | 6|2.33|0.014815749|DISTINCT, OPTIONAL|
+| C8 | Complex | 11 | 3 | 3067 | 4|3.25|0.012449596|DISTINCT, OPTIONAL|
+| C9 | Complex | 9 | 3| 100 | 4|2.75|0.01107262| OPTIONAL, ORDER BY, LIMIT|
+| C10 | Complex | 10 | 3 | 102 | 5|2.8|0.002712048| DISTINCT|
+| L1 | Large Data | 6| 3 | 227192| 4|2|0.19222037| UNION |
+| L2 | Large Data | 6 | 3 | 152899| 2|3.5|0.286786739|DISTINCT, FILTER|
+| L3 | Large Data | 7 | 3 | 257158 | 3|3|0.245822714| FILTER, ORDER BY|
+| L4 | Large Data | 8 | 4 | 397204| 4|2.5|0.305675513|UNION, FILTER, REGEX|
+| L5 | Large Data | 11 | 4 | 190575 | 5|3|0.485882296|FILTER|
+| L6 | Large Data | 10 | 4 | 282154| 5|2.8|0.349528975|FILTER, DISTINCT|
+| L7 | Large Data | 5 | 4 | 80460 | 3|2.33|0.20069629|DISTINCT, FILTER|
+| L8 | Large Data | 8 | 3 | 306705 | 4|2.5|0.278093563|UNION, FILTER|
 
 <font color="red">
 Further advanced queries features can be found [http://goo.gl/eeW5W0 here] and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [http://goo.gl/fDNXj9 here].
