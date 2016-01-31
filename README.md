@@ -6,6 +6,11 @@ LargeRDFBench is a comprehensive benchmark encompasses real data and real querie
 # Benchmark Datasets Statistics
 
 In the following we provide information about the datasets used in LargeRDFBench along with download links, both for data-dumps and Virtuso-7.10 SPARQL endpoints. 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 | *Dataset* | *#Triples* | *#Distinct Subjects* | *#Distinct Predicates* | *#Distinct Objects* | *#Classes* | *#Links* | *Structuredness* |
 |LinkedTCGA-M|415030327|83006609|6|166106744|1|-|1|
