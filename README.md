@@ -59,7 +59,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ### Benchmark Queries 
 
-LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [https://code.google.com/p/fbench/ FedBench]), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]). The queries full results can be downloaded from [http://goo.gl/8tX1Pa here].
+LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ).
 
 
 | *Query*  | *Query Type* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
@@ -98,12 +98,12 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 | L8 | Large Data | 8 | 3 | 306705 | 4|2.5|0.278093563|UNION, FILTER|
 
 <font color="red">
-Further advanced queries features can be found [http://goo.gl/eeW5W0 here] and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [http://goo.gl/fDNXj9 here].
-The LargeRDFBench java utility to calculate all these queries features can be found [http://goo.gl/TgVg2G here] along with usage examples.</font>
+Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](http://goo.gl/fDNXj9).
+The LargeRDFBench java utility to calculate all these queries features can be found [here](http://goo.gl/TgVg2G ) along with usage examples.</font>
 
 ### Usage Information
 
-|<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([http://goo.gl/Z57W8P SPARQL 1.0], [http://goo.gl/hnJ8D3 SPARQL 1.1]), Complete Queries [http://goo.gl/8tX1Pa Results] |
+|<th colspan="7" style="text-align: center;">LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
 In the following we explain how one can setup the LargeRDFBench evaluation framework and measure the performance of the federation engine. 
 
