@@ -83,14 +83,14 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 | C1 | Complex | Hybrid|8 | 5 | 1000 | 4|2.5|0.010779222| DISTINCT, FILTER, OPTIONAL, LIMIT |
 | C2 | Complex |Hybrid| 8 | 5 | 4 | 4|2.25|0.00972466| OPTIONAL, FILTER|
 | C3 | Complex |Hybrid| 8 | 3 | 9 | 4|2.25|0.020214493| DISTINCT, OPTIONAL|
-| C4 | Complex |Hybrid| 12 | 8 | 50 | 2|6|0.012412695| DISTINCT, OPTIONAL, LIMIT|
+| C4 | Complex |Star| 12 | 8 | 50 | 2|6|0.012412695| DISTINCT, OPTIONAL, LIMIT|
 | C5 | Complex |Hybrid| 8 | 8 | 500 | 5|2.4|0.018655228| FILTER, LIMIT|
 | C6 | Complex |Hybrid| 9 | 2 | 148 | 5|2.8|0.022971132| ORDER BY|
 | C7 | Complex |Hybrid| 9 | 2 | 112 | 6|2.33|0.014815749|DISTINCT, OPTIONAL|
 | C8 | Complex |Hybrid| 11 | 3 | 3067 | 4|3.25|0.012449596|DISTINCT, OPTIONAL|
 | C9 | Complex |Hybrid| 9 | 3| 100 | 4|2.75|0.01107262| OPTIONAL, ORDER BY, LIMIT|
 | C10 | Complex |Hybrid| 10 | 3 | 102 | 5|2.8|0.002712048| DISTINCT|
-| L1 | Large Data |Hybrid| 6| 3 | 227192| 4|2|0.19222037| UNION |
+| L1 | Large Data |Path| 6| 3 | 227192| 4|2|0.19222037| UNION |
 | L2 | Large Data |Hybrid| 6 | 3 | 152899| 2|3.5|0.286786739|DISTINCT, FILTER|
 | L3 | Large Data |Hybrid| 7 | 3 | 257158 | 3|3|0.245822714| FILTER, ORDER BY|
 | L4 | Large Data |Hybrid| 8 | 4 | 397204| 4|2.5|0.305675513|UNION, FILTER, REGEX|
