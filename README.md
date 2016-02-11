@@ -24,7 +24,7 @@ In the following we provide information about the datasets used in LargeRDFBench
 |New York Times|335198|21666|36|191538|2|31.7k|0.731|
 |Semantic Web Dog Food|103595|11974|118|37547|103|2.3k|0.426|
 |Affymetrix|44207146|1421763|105|13240270|3|246.3k|0.506|
-| *Total* | *1003960176* | *165785212* | *2160* | *326209517* | *459* | *792.3k* | *Avg. 0.696*|
+| *Total* | *1003960176* | *165785212* | *2160* | *326209517* | *459* | *792.3k* | *Avg. 0.65*|
 
 Duan et al. " Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets" introduced the notion of structuredness or choerence, which indicates
 whether the instances in a dataset have only a few or all attributes of their
