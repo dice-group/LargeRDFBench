@@ -191,7 +191,7 @@ Following are the specifications of the machines used in the evaluation to host 
   * [ Maulik Kamdar](http://maulik-kamdar.com/) (Standford University)
  
 We are especially thankful to Helena Deus (Foundations Medicine,  Cambridge, MA, USA) and Shanmukha Sampath (Democritus University of Thrace, Alexandroupoli, Greece) 
-for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations. 	
+for providing real use case large data queries and useful discussions regarding large data sets selection. We are also thankful to Jonas S. Almeida (University of Alabama at Birmingham), Bade Iriaboho (University of Alabama at Birmingham), Sarven Capadisli, Maulik Kamdar (Standford University), and Aftab Iqbal (INSIGHT @ NUI Galway) for their contributions. Finally, we are very much thankful to Andreas Schwarte (fluid Operations, Germany), Maria-Esther Vidal ( Universidad Simón Bolívar), Olaf Görlitz (University Koblenz, Germany), Olaf Hartig (HPI, Germany) and Gabriela Montoya (Nantes M´etropole) for all their email conversations, feedbacks, and explanations. 	
 
 	
 
