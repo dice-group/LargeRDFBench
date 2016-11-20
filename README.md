@@ -80,7 +80,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 |S12|2 Star, 1 Path, 1 Sink|	6|	3|	393|	4|	2.25|	0.012|	-|	
 |S13|3 Star|	5|	3|	28|	3|	2.33|	0.014|	-|
 |S14|2 Star, 1 Sink|	5|	3|	1620|	3|	2|	0.0125|	OPTIONAL|
-|Avg.|	|	4.3|	3.3|	907|	2.6|	2.1|	0.057|	|
+| *Avg.* |	| *4.3* |	*3.3*|	*907*|	*2.6*|	*2.1*|	*0.057*|	|
 |C1|2 Star, 1 Path, 1 Sink|	8|	5|	1000|	4|	2.5|	0.010|	DISITINCT, FILTER, OPTIONAL, LIMIT|	
 |C2|2 Star, 1 Path, 1 Sink|	8|	5|	4|	4|	2.25|	0.009|	OPTIONAL, FILTER|
 |C3|2 Star, 1 Path, 1 Hybrid|	8|	3|	9|	4|	2.25|	0.020|	DISTINCT, OPTIONAL|	
@@ -91,7 +91,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 |C8|2 Star, 1 Path, 1 Hybrid|	11|	3|	3067|	4|	3.25|	0.012|	DISTINCT, OPTIONAL|
 |C9|2 Star, 2 Path|	9|	3|	100|	4|	2.75|	0.011|	OPTIONAL, ORDER BY, LIMIT|	
 |C10|2 Star, 2 Path, 1 Hybrid|	10|	3|	102|	5|	2.8|	0.002|	DISTINCT|
-|Avg.|	|	9.2|	4.2|	509.2|	4.3|	2.93|	0.013|	|
+|*Avg.*|	|	*9.2*|	*4.2*|	*509.2*|	*4.3*|	*2.93*|	*0.013*|	|
 |L1|4 Path|	6|	3|	227192|	4|	2|	0.192|	UNION|
 |L2|1 Path, 1 Hybrid|	6|	3|	152899|	2|	3.5|	0.286|	DISTINCT, FILTER|	
 |L3|2 Path, 1 Hybrid|	7|	3|	257158|	3|	3|	0.245|	FILTER, ORDER BY|
@@ -100,7 +100,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 |L6|1 Star, 1 Path,1 Sink,2 Hybrid|	10|	4|	282154|	5|	2.8|	0.349|	FILTER, DISTINCT|	
 |L7|2 Path, 1 Hybrid|	5|	4|	80460|	3|	2.33|	0.200|	DIARINCT, FILTER|
 |L8|2 Path, 2 Hybrid|	8|	3|	306705|	4|	2.5|	0.278|	UNION, FILTER| 
-|Avg.|	|	7.62|	3.5|	236793|	3.75|	2.70|	0.293|	|
+|*Avg.*|	|	*7.62*|	*3.5*|	*236793*|	*3.75*|	*2.70*|	*0.293*|	|
 
 
 <font color="red">
