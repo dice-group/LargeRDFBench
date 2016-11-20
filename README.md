@@ -62,83 +62,44 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). Please note that we call a query as hybrid if there is at least one hybrid node in the directed hypergraph representation of the query given in the paper. Star type queries only contain star node(s) and path queries only contain path node(s). S8 does not contain any join. 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
-
 | *Query*  | *Join Vertices* |   *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
 | --- | --- | --- | ---| --- | --- |---- | ---- | ---- |
-|S1|	1 Star|	3|	2|	90|	1|	2|	0.333|	UN|
+|S1|	1 Star|	3|	2|	90|	1|	2|	0.333|	UNION|
 |S2|	1 Star,1 Path|	3|	2|	1|	2|	2|	0.007|	-|
 |S3|	1 Star,1 Hybrid|	5|	5|	2|	2|	3|	0.008|	-|	
 |S4|	2 Star,2 Sink,1 Path|	5|	5|	1|	5|	2|	0.019|	-|	
 |S5|	1 Star,2 Path|	4|	5|	2|	3|	2|	0.006|	-|	
 |S6|	1 Star,2 Path|	4|	4|	11|	3|	2|	0.019|	-|	
 |S7|	1 Star,2 Path|	4|	5|	1|	3|	2|	0.020|	-|	
-|S8|	No Join|	2|	2|	1159|	0|	NA|	0.001|	UN|	
+|S8|	No Join|	2|	2|	1159|	0|	NA|	0.001|	UNION|	
 |S9|	1 Path|	3|	4|	333|	1|	2|	0.333|	UN|	
 |S10| 1 Star,2 Path|	5|	2|	9054|	3|	2.33|	0.016|	-|	
 |S11| 2 Star,1 Sink,1 Hybrid|	7|	2|	3|	4|	2.5|	0.006|	-|
 |S12|	2 Star,1 Path,1 Sink|	6|	3|	393|	4|	2.25|	0.012|	-|	
 |S13|	3 Star|	5|	3|	28|	3|	2.33|	0.014|	-|
-|S14|	2 Star,1 Sink|	5|	3|	1620|	3|	2|	0.0125|	OP|
+|S14|	2 Star,1 Sink|	5|	3|	1620|	3|	2|	0.0125|	OPTIONAL|
 |Avg.|	|	4.3|	3.3|	907|	2.6|	2.1|	0.057|	|
-|C1|	2 Star,1 Path,1 Sink|	8|	5|	1000|	4|	2.5|	0.010|	DI, FI, OP, LI|	
-|C2|	2 Star,1 Path,1 Sink|	8|	5|	4|	4|	2.25|	0.009|	OP, FI|
-|C3|	2 Star,1 Path,1 Hybrid|	8|	3|	9|	4|	2.25|	0.020|	DI, OP|	
-|C4|	2 Star|	12|	8|	50|	2|	6|	0.0124|	DI, OP, LI|	
-|C5|	2 Star,2 Path,1 Sink|	8|	8|	500|	5|	2.4|	0.0186|	FI, LI|
-|C6| 2 Star,1 Path,2 Sink|	9|	2|	148|	5|	2.8|	0.022|	OB|
-|C7|3 Star,1 Path,1 Sink,1 Hybrid|	9|	2|	112|	6|	2.33|	0.014|	DI, OP|	
-|C8|	2 Star,1 Path,1 Hybrid|	11|	3|	3067|	4|	3.25|	0.012|	DI, OP|
-|C9|	2 Star,2 Path|	9|	3|	100|	4|	2.75|	0.011|	OP, OB, LI|	
-|C10|	2 Star,2 Path,1 Hybrid|	10|	3|	102|	5|	2.8|	0.002|	DI|
+|C1|	2 Star,1 Path,1 Sink|	8|	5|	1000|	4|	2.5|	0.010|	DISITINCT, FILTER, OPTIONAL, LIMIT|	
+|C2|	2 Star,1 Path,1 Sink|	8|	5|	4|	4|	2.25|	0.009|	OPTIONAL, FILTER|
+|C3|	2 Star,1 Path,1 Hybrid|	8|	3|	9|	4|	2.25|	0.020|	DISTINCT, OPTIONAL|	
+|C4|	2 Star|	12|	8|	50|	2|	6|	0.0124|	DISTINCT, OPTIONAL, LIMIT|	
+|C5|	2 Star,2 Path,1 Sink|	8|	8|	500|	5|	2.4|	0.0186|	FILTER, LIMIT|
+|C6| 2 Star,1 Path,2 Sink|	9|	2|	148|	5|	2.8|	0.022|	ORDER BY|
+|C7|3 Star,1 Path,1 Sink,1 Hybrid|	9|	2|	112|	6|	2.33|	0.014|	DISTINCT, OPTIONAL|	
+|C8|	2 Star,1 Path,1 Hybrid|	11|	3|	3067|	4|	3.25|	0.012|	DISTINCT, OPTIONAL|
+|C9|	2 Star,2 Path|	9|	3|	100|	4|	2.75|	0.011|	OPTIONAL, ORDER BY, LIMIT|	
+|C10|	2 Star,2 Path,1 Hybrid|	10|	3|	102|	5|	2.8|	0.002|	DISTINCT|
 |Avg.|	|	9.2|	4.2|	509.2|	4.3|	2.93|	0.013|	|
-|L1|	4 Path|	6|	3|	227192|	4|	2|	0.192|	UN|
-|L2|	1 Path,1 Hybrid|	6|	3|	152899|	2|	3.5|	0.286|	DI, FI|	
-|L3|	2 Path,1 Hybrid|	7|	3|	257158|	3|	3|	0.245|	FI, OB|
-|L4|	2 Path,2 Hybrid|	8|	4|	397204|	4|	2.5|	0.305|	UN, FI, RE|	
-|L5|	1 Star,1 Path,1 Sink,2 Hybrid|	11|	4|	190575|	5|	3|	0.485|	FI|
-|L6|	1 Star,1 Path,1 Sink,2 Hybrid|	10|	4|	282154|	5|	2.8|	0.349|	FI, DI|	
-|L7|	2 Path,1 Hybrid|	5|	4|	80460|	3|	2.33|	0.200|	DI, FI|
-|L8|	2 Path,2 Hybrid|	8|	3|	306705|	4|	2.5|	0.278|	UN, FI| 
+|L1|	4 Path|	6|	3|	227192|	4|	2|	0.192|	UNION|
+|L2|	1 Path,1 Hybrid|	6|	3|	152899|	2|	3.5|	0.286|	DISTINCT, FILTER|	
+|L3|	2 Path,1 Hybrid|	7|	3|	257158|	3|	3|	0.245|	FILTER, ORDER BY|
+|L4|	2 Path,2 Hybrid|	8|	4|	397204|	4|	2.5|	0.305|	UNION, FILTER, REGEX|	
+|L5|	1 Star,1 Path,1 Sink,2 Hybrid|	11|	4|	190575|	5|	3|	0.485|	FILTER|
+|L6|	1 Star,1 Path,1 Sink,2 Hybrid|	10|	4|	282154|	5|	2.8|	0.349|	FILTER, DISTINCT|	
+|L7|	2 Path,1 Hybrid|	5|	4|	80460|	3|	2.33|	0.200|	DIARINCT, FILTER|
+|L8|	2 Path,2 Hybrid|	8|	3|	306705|	4|	2.5|	0.278|	UNION, FILTER| 
 |Avg.|	|	7.62|	3.5|	236793|	3.75|	2.70|	0.293|	|
 
-
-
-
-
-| *Query*  | *Query Type* |  *Structure* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
-| --- | --- | --- | ---| --- | --- | --- |---- | ---- | ---- |
-| S1 | Simple |Star| 3 |  2 | 90 | 1 | 2 | 0.333334927 | UNION |
-| S2 | Simple |Star|  3 | 2 | 1 | 2  |2|0.007391659| X |
-| S3 | Simple |Hybrid|  5 | 5 | 2 | 2  |3|0.008889571| X  |
-| S4 | Simple |Path|  5 | 5 | 1 | 5  |2|0.019295158|X|
-| S5 | Simple |Path|  4 | 5 | 2 | 3  |2|0.006169376|X|
-| S6 | Simple |Path|  4 | 4 | 11 | 3 |2|0.019395937|X|
-| S7 | Simple |Path|  4 | 5 | 1 | 3  |2|0.020198747|X|
-| S8 | Simple | -| 2 | 2 | 1159 |0|NA|0.00112084| UNION|
-| S9 | Simple | Path|3 | 4 | 333 |1 |2|0.3335448| UNION|
-| S10 | Simple |Hybrid| 5 | 2 | 9054 |3 |2.33|0.016010968|X|
-| S11 | Simple |Hybrid| 7 | 2 | 3 | 4|2.5|0.006628492|X|
-| S12 | Simple |Hybrid| 6 | 3 | 393 | 4|2.25|0.01217423|X|
-| S13 | Simple |Hybrid| 5 | 3 | 28 | 3|2.33|0.014815076|X|
-| S14 | Simple |Hybrid| 5 | 3 | 1620 | 3|2|0.012452045|OPTIONAL|
-| C1 | Complex | Hybrid|8 | 5 | 1000 | 4|2.5|0.010779222| DISTINCT, FILTER, OPTIONAL, LIMIT |
-| C2 | Complex |Hybrid| 8 | 5 | 4 | 4|2.25|0.00972466| OPTIONAL, FILTER|
-| C3 | Complex |Hybrid| 8 | 3 | 9 | 4|2.25|0.020214493| DISTINCT, OPTIONAL|
-| C4 | Complex |Star| 12 | 8 | 50 | 2|6|0.012412695| DISTINCT, OPTIONAL, LIMIT|
-| C5 | Complex |Hybrid| 8 | 8 | 500 | 5|2.4|0.018655228| FILTER, LIMIT|
-| C6 | Complex |Hybrid| 9 | 2 | 148 | 5|2.8|0.022971132| ORDER BY|
-| C7 | Complex |Hybrid| 9 | 2 | 112 | 6|2.33|0.014815749|DISTINCT, OPTIONAL|
-| C8 | Complex |Hybrid| 11 | 3 | 3067 | 4|3.25|0.012449596|DISTINCT, OPTIONAL|
-| C9 | Complex |Hybrid| 9 | 3| 100 | 4|2.75|0.01107262| OPTIONAL, ORDER BY, LIMIT|
-| C10 | Complex |Hybrid| 10 | 3 | 102 | 5|2.8|0.002712048| DISTINCT|
-| L1 | Large Data |Path| 6| 3 | 227192| 4|2|0.19222037| UNION |
-| L2 | Large Data |Hybrid| 6 | 3 | 152899| 2|3.5|0.286786739|DISTINCT, FILTER|
-| L3 | Large Data |Hybrid| 7 | 3 | 257158 | 3|3|0.245822714| FILTER, ORDER BY|
-| L4 | Large Data |Hybrid| 8 | 4 | 397204| 4|2.5|0.305675513|UNION, FILTER, REGEX|
-| L5 | Large Data |Hybrid| 11 | 4 | 190575 | 5|3|0.485882296|FILTER|
-| L6 | Large Data |Hybrid| 10 | 4 | 282154| 5|2.8|0.349528975|FILTER, DISTINCT|
-| L7 | Large Data | Hybrid|5 | 4 | 80460 | 3|2.33|0.20069629|DISTINCT, FILTER|
-| L8 | Large Data |Hybrid| 8 | 3 | 306705 | 4|2.5|0.278093563|UNION, FILTER|
 
 <font color="red">
 Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](http://goo.gl/fDNXj9).
