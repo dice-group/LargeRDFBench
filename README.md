@@ -62,6 +62,49 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). Please note that we call a query as hybrid if there is at least one hybrid node in the directed hypergraph representation of the query given in the paper. Star type queries only contain star node(s) and path queries only contain path node(s). S8 does not contain any join. 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
+
+| *Query* |	*Join Vertices*	| *#TP* |	*#SS* |	*#Results* |	*#JV*	| *MJVD*	| * MTPS* | *Clauses* |
+|S1|	1 Star|	3|	2|	90|	1|	2|	0.333|	UN|
+|S2|	1 Star,1 Path|	3|	2|	1|	2|	2|	0.007|	-|
+|S3|	1 Star,1 Hybrid|	5|	5|	2|	2|	3|	0.008|	-|	
+|S4|	2 Star,2 Sink,1 Path|	5|	5|	1|	5|	2|	0.019|	-|	
+|S5|	1 Star,2 Path|	4|	5|	2|	3|	2|	0.006|	-|	
+|S6|	1 Star,2 Path|	4|	4|	11|	3|	2|	0.019|	-|	
+|S7|	1 Star,2 Path|	4|	5|	1|	3|	2|	0.020|	-|	
+|S8|	No Join|	2|	2|	1159|	0|	NA|	0.001|	UN|	
+|S9|	1 Path|	3|	4|	333|	1|	2|	0.333|	UN|	
+|S10| 1 Star,2 Path|	5|	2|	9054|	3|	2.33|	0.016|	-|	
+|S11| 2 Star,1 Sink,1 Hybrid|	7|	2|	3|	4|	2.5|	0.006|	-|
+|S12|	2 Star,1 Path,1 Sink|	6|	3|	393|	4|	2.25|	0.012|	-|	
+|S13|	3 Star|	5|	3|	28|	3|	2.33|	0.014|	-|
+|S14|	2 Star,1 Sink|	5|	3|	1620|	3|	2|	0.0125|	OP|
+|Avg.|	|	4.3|	3.3|	907|	2.6|	2.1|	0.057|	|
+|C1|	2 Star,1 Path,1 Sink|	8|	5|	1000|	4|	2.5|	0.010|	DI, FI, OP, LI|	
+|C2|	2 Star,1 Path,1 Sink|	8|	5|	4|	4|	2.25|	0.009|	OP, FI|
+|C3|	2 Star,1 Path,1 Hybrid|	8|	3|	9|	4|	2.25|	0.020|	DI, OP|	
+|C4|	2 Star|	12|	8|	50|	2|	6|	0.0124|	DI, OP, LI|	
+|C5|	2 Star,2 Path,1 Sink|	8|	8|	500|	5|	2.4|	0.0186|	FI, LI|
+|C6| 2 Star,1 Path,2 Sink|	9|	2|	148|	5|	2.8|	0.022|	OB|
+|C7|3 Star,1 Path,1 Sink,1 Hybrid|	9|	2|	112|	6|	2.33|	0.014|	DI, OP|	
+|C8|	2 Star,1 Path,1 Hybrid|	11|	3|	3067|	4|	3.25|	0.012|	DI, OP|
+|C9|	2 Star,2 Path|	9|	3|	100|	4|	2.75|	0.011|	OP, OB, LI|	
+|C10|	2 Star,2 Path,1 Hybrid|	10|	3|	102|	5|	2.8|	0.002|	DI|
+|Avg.|	|	9.2|	4.2|	509.2|	4.3|	2.93|	0.013|	|
+|L1|	4 Path|	6|	3|	227192|	4|	2|	0.192|	UN|
+|L2|	1 Path,1 Hybrid|	6|	3|	152899|	2|	3.5|	0.286|	DI, FI|	
+|L3|	2 Path,1 Hybrid|	7|	3|	257158|	3|	3|	0.245|	FI, OB|
+|L4|	2 Path,2 Hybrid|	8|	4|	397204|	4|	2.5|	0.305|	UN, FI, RE|	
+|L5|	1 Star,1 Path,1 Sink,2 Hybrid|	11|	4|	190575|	5|	3|	0.485|	FI|
+|L6|	1 Star,1 Path,1 Sink,2 Hybrid|	10|	4|	282154|	5|	2.8|	0.349|	FI, DI|	
+|L7|	2 Path,1 Hybrid|	5|	4|	80460|	3|	2.33|	0.200|	DI, FI|
+|L8|	2 Path,2 Hybrid|	8|	3|	306705|	4|	2.5|	0.278|	UN, FI| 
+|Avg.|	|	7.62|	3.5|	236793|	3.75|	2.70|	0.293|	|
+
+
+
+
+
+
 |-----|
 
 | *Query*  | *Query Type* |  *Structure* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
