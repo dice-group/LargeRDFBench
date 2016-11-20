@@ -63,10 +63,8 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
-| *Query*  | *Query Type* |  *Structure* | *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
-| --- | --- | --- | ---| --- | --- | --- |---- | ---- | ---- |
-
-| *Query* |	*Join Vertices*	| *#TP* |	*#SS* |	*#Results* |	*#JV*	| *MJVD* | * MTPS*
+| *Query*  | *Join Vertices* |   *#Triple Patterns* | *#Sources Span* | *#Results* |  *#Join Vertices* | *Mean Join Vertex Degree* | *Mean Triple Pattern Selectivity* |  *Used SPARQL Clauses* | 
+| --- | --- | --- | ---| --- | --- |---- | ---- | ---- |
 |S1|	1 Star|	3|	2|	90|	1|	2|	0.333|	UN|
 |S2|	1 Star,1 Path|	3|	2|	1|	2|	2|	0.007|	-|
 |S3|	1 Star,1 Hybrid|	5|	5|	2|	2|	3|	0.008|	-|	
