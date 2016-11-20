@@ -80,7 +80,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 |S12|2 Star, 1 Path, 1 Sink|	6|	3|	393|	4|	2.25|	0.012|	-|	
 |S13|3 Star|	5|	3|	28|	3|	2.33|	0.014|	-|
 |S14|2 Star, 1 Sink|	5|	3|	1620|	3|	2|	0.0125|	OPTIONAL|
-| *Avg.* |	| *4.3* |	*3.3*|	*907*|	*2.6*|	*2.1*|	*0.057*|	|
+| *Avg.* |	| *4.3* |	*3.3* |	*907* |	*2.6* |	*2.1* |	*0.057* |	|
 |C1|2 Star, 1 Path, 1 Sink|	8|	5|	1000|	4|	2.5|	0.010|	DISITINCT, FILTER, OPTIONAL, LIMIT|	
 |C2|2 Star, 1 Path, 1 Sink|	8|	5|	4|	4|	2.25|	0.009|	OPTIONAL, FILTER|
 |C3|2 Star, 1 Path, 1 Hybrid|	8|	3|	9|	4|	2.25|	0.020|	DISTINCT, OPTIONAL|	
