@@ -164,7 +164,7 @@ You should be able to run all of the benchmark SPARQL 1.1 queries by using onlin
 
 
 #### How to calculate LargeRDFBench metrics? 
-LargeRDFBench makes use of 6 -- #ASK, #TP. Sources, Source selection time, Query runtime, Results completeness, Results correctness -- main metrics (See paper for details). The first 4 can directly be computed from the source code (checkout the selected systems to see how we calculated these 4 metrics) of the underlying federation engine.  While for the later 2, we provided a  [ java tool](http://goo.gl/rO2yvb) which computes the precision, recall, F1-score of the results retrieved by the federation engine for a given benchmark query. 
+LargeRDFBench makes use of 7 -- #ASK, #TP. Sources, Source selection time, Query runtime, Results completeness, Results correctness, Number of endpoint request -- main metrics (See paper for details). The first 4 can directly be computed from the source code (checkout the selected systems to see how we calculated these 4 metrics) of the underlying federation engine.  While for the later 2, we provided a  [ java tool](http://goo.gl/rO2yvb) which computes the precision, recall, F1-score of the results retrieved by the federation engine for a given benchmark query. We used virtuos SPARQL endpoints and enabled the http log caching, thus all of the endpoint requests were stored in the query log files and we just count the total number of requests by using a simple java program which reads each log file line by line and count the total number of lines (in all log files from 13 endpoints ) as total endpoints requets. 
 
 
 
