@@ -104,8 +104,8 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 
 
 <font color="red">
-Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](http://goo.gl/fDNXj9).
-The LargeRDFBench java utility to calculate all these queries features can be found [here](http://goo.gl/TgVg2G ) along with usage examples.</font>
+Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found ([here](https://docs.google.com/document/d/1mFSgq4YzsMmpfRC0TsvaddJbW506BqAo7omY2XibF2Y/edit?usp=sharing)).
+The LargeRDFBench java utility to calculate all these queries features can be found ([here](http://goo.gl/TgVg2G )) along with usage examples.</font>
 
 ### Usage Information
 
