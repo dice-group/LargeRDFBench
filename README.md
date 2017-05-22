@@ -109,7 +109,7 @@ File:QueryProcessingEval.java
 
 Follow the instructions given at https://github.com/anapsid/anapsid to configure the system and then use anapsid/ivan-scripts/runQuery.sh to run a query.
 
-###Running SPARQL 1.1 Queries 
+### Running SPARQL 1.1 Queries 
 Both ANAPSID, FedX provides support for SPARQL 1.1 queries. The procedure for running SPARQL 1.1 queries on these two systems remain the same. You can also directly run SPARQL 1.1 queries of LargeRDFBench from SPARQL endpoint online interface (see Local endpoints URL's from second table given above). 
 
 While running SPARQL 1.1 federation queries with online interface of Virtuoso SPARQL endpoint, you may encounter the following error
@@ -131,19 +131,19 @@ LargeRDFBench makes use of 7 -- #ASK, #TP. Sources, Source selection time, Query
 
 
 
-###Evaluation Results and Runtime Errors
+### Evaluation Results and Runtime Errors
  
 We have compared 5 - [FedX](https://www.mpi-inf.mpg.de/~khose/publications/ISWC2011.pdf ), [SPLENDID](http://ceur-ws.org/Vol-782/GoerlitzAndStaab_COLD2011.pdf ), [ANAPSID](http://link.springer.com/chapter/10.1007%2F978-3-642-25073-6_2#page-1 ), [FedX+HiBISCuS](http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf ), [SPLENDID+HiBISUCuS](http://svn.aksw.org/papers/2014/HiBISCuS_ESWC/public.pdf) - state-of-the-art SPARQL endpoint federation systems with LargeRDFBench. Our complete evaluation results can be downloaded from [here](http://goo.gl/d7LxPN ) and the runtime errors thrown by the federation systems can be downloaded from [here](https://drive.google.com/file/d/0B1tUDhWNTjO-eU9nM1ZCeElUaUk/view?usp=sharing ). 
  
 
-###SPARQL Endpoints Specifications
+### SPARQL Endpoints Specifications
 Following are the specifications of the machines used in the evaluation to host SPARQL endpoints. 
 
 ![](https://sites.google.com/site/saleemsweb/home/sparqlspecs.png)
 
 
 
-###Benchmark Contributors
+### Benchmark Contributors
 
   * [ Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Ali Hasnain](https://www.deri.ie/users/ali-hasnain/)(INSIGHT @ NUI Galway)
