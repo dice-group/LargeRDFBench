@@ -1,6 +1,7 @@
 # LargeRDFBench
 
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
+LargeRDFBench is under-review to journal of web semantics with minor revision. The pre-print pdf is available from [here](https://www.researchgate.net/publication/316975670_LargeRDFBench_A_Billion_Triples_Benchmark_for_SPARQL_Endpoint_Federation) 
 
 
 
