@@ -33,7 +33,7 @@ types set. They show that artificial datasets are typically highly structured an
 <font color="red">
 The complete details along with type coverages can be found [ here](http://goo.gl/XpSSPN).  The LargeRDFBench java utility to calculate the dataset structuredness can be found [ here](http://goo.gl/TgVg2G) along with usage examples. </font>
 
-###Datasets Availability 
+### Datasets Availability 
 
 All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded from the links given below. For SPARQL endpoint federation systems, we strongly recommend to directly download the endpoints as some of the datadumps are quite big and require a lot of upload time. You may start a SPARQL endpoint from bin/start.bat (for windows) and bin/start_virtuoso.sh (for linux). Please note that LinkedTCGA-M(Mehtylation), LinkedTCGA-E(Exon),  LinkedTCGA-A(All others), and DBpedia-subset are subsets of the live SPARQL endpoints. Further, the TCGA live SPARQL endpoints are not aligned with Affymetrix, Drugbank, and DBpedia. 
 
@@ -63,7 +63,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
-https://sites.google.com/site/saleemsweb/home/largerdfbench-query-stats.png
+![](https://sites.google.com/site/saleemsweb/home/largerdfbench-query-stats.png)
 
 |---|
 
