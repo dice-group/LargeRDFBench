@@ -63,7 +63,7 @@ LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 
-![](https://sites.google.com/site/saleemsweb/home/largerdfbench-query-stats.png)
+![](https://sites.google.com/site/saleemsweb/swsa-award/stats.png)
 
 
 Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](https://docs.google.com/document/d/1mFSgq4YzsMmpfRC0TsvaddJbW506BqAo7omY2XibF2Y/edit?usp=sharing ).
