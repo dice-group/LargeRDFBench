@@ -59,9 +59,8 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ### Benchmark Queries 
 
-LargeRDFBench comprise of a total of 40 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 40 queries are divided into four different types : 14 simple queries (S1-S14 from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries (C1-C10), 8 large data queries (L1-L8), and 8 complex+high data sources (CH1-CH8) queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). 
+LargeRDFBench comprise of a total of 40 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 40 queries are divided into four different types : 14 simple queries (S1-S14 from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries (C1-C10), 8 large data queries (L1-L8), and 8 complex+high data sources (CH1-CH8) queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](https://drive.google.com/file/d/16z3jfQzjL7YJbcSNRoO6QOVJJD3J9MLW/view?usp=sharing ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). 
 
-|LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 <div style="text-align:center"><img src ="https://sites.google.com/site/saleemsweb/swsa-award/stats.png" /></div>
 The highlighted complex + high data sources queries (CH1-CH8) are included in the extension of LargeRDFBench. 
 
