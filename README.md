@@ -1,7 +1,7 @@
 # LargeRDFBench
 
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
-LargeRDFBench is under-review to journal of web semantics with minor revision. The pre-print pdf is available from [here](https://www.researchgate.net/publication/316975670_LargeRDFBench_A_Billion_Triples_Benchmark_for_SPARQL_Endpoint_Federation) 
+LargeRDFBench has been published at journal of web semantics. The pdf is available from [here](https://www.sciencedirect.com/sdfe/pdf/download/read/noindex/pii/S1570826817300719/1-s2.0-S1570826817300719-main.pdf). The extension of the LargeRDFBench is under-review at ISWC workshop. 
 
 
 ### Benchmark Datasets Statistics
@@ -59,7 +59,7 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ### Benchmark Queries 
 
-LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). Please note that we call a query as hybrid if there is at least one hybrid node in the directed hypergraph representation of the query given in the paper. 
+LargeRDFBench comprise of a total of 40 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 40 queries are divided into four different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, 8 large data queries, and 8 complex+high data sources queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 <div style="text-align:center"><img src ="https://sites.google.com/site/saleemsweb/swsa-award/stats.png" /></div>
