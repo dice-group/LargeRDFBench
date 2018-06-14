@@ -62,8 +62,8 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 LargeRDFBench comprise of a total of 32 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 32 queries are divided into three different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, and 8 large data queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). Please note that we call a query as hybrid if there is at least one hybrid node in the directed hypergraph representation of the query given in the paper. 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
+<div style="text-align:center"><img src ="https://sites.google.com/site/saleemsweb/swsa-award/stats.png" /></div>
 
-![](https://sites.google.com/site/saleemsweb/swsa-award/stats.png)
 
 
 Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](https://docs.google.com/document/d/1mFSgq4YzsMmpfRC0TsvaddJbW506BqAo7omY2XibF2Y/edit?usp=sharing ).
