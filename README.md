@@ -1,7 +1,7 @@
 # LargeRDFBench
 
 LargeRDFBench is a comprehensive benchmark encompasses real data and real queries (i.e., showing typical requests) of varying complexities, suite for testing and analyzing both the efficiency and effectiveness of federated query processing over multiple SPARQL endpoints. 
-LargeRDFBench has been published at journal of web semantics. The pdf is available from [here](https://reader.elsevier.com/reader/sd/2C0DF74F990949B34C0BC9832654819A77B7DA301A3990D3710A1DDA1F51D03438B2B95D346D13BF59E8FA39C4AFD109). The extension of the LargeRDFBench is under-review at ISWC workshop. 
+LargeRDFBench has been published at journal of web semantics. The pdf is available from [here](https://reader.elsevier.com/reader/sd/ADBBA98ED82ABC93BE9DB8917CB8B80016DA85F64C1CC32D07015948F62527A6F27225186A49488A3E379E881F910989). The extension of the LargeRDFBench is under-review at ISWC workshop. 
 
 
 ### Benchmark Datasets Statistics
@@ -59,11 +59,11 @@ All the datasets and corresponding virtuoso SPARQL endpoints can be downloaded f
 
 ### Benchmark Queries 
 
-LargeRDFBench comprise of a total of 40 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 40 queries are divided into four different types : 14 simple queries (from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries, 8 large data queries, and 8 complex+high data sources queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). 
+LargeRDFBench comprise of a total of 40 queries (both SPARQL 1.0 and SPARQL 1.1 versions) for SPARQL endpoint federation approaches. The 40 queries are divided into four different types : 14 simple queries (S1-S14 from [FedBench](https://code.google.com/p/fbench/ )), 10 complex queries (C1-C10), 8 large data queries (L1-L8), and 8 complex+high data sources (CH1-CH8) queries. The detail of these queries is given in table below. All of the queries can be downloaded from ([SPARQL 1.0](http://goo.gl/Z57W8P ), [SPARQL 1.1](http://goo.gl/hnJ8D3)). The queries full results can be downloaded from [here](http://goo.gl/8tX1Pa ). 
 
 |LargeRDFBench SPARQL Endpoint Federation Queries ([SPARQL 1.0](http://goo.gl/Z57W8P), [ SPARQL 1.1](http://goo.gl/hnJ8D3)), Complete Queries [Results](http://goo.gl/8tX1Pa) |
 <div style="text-align:center"><img src ="https://sites.google.com/site/saleemsweb/swsa-award/stats.png" /></div>
-
+The highlighted complex + high data sources queries (CH1-CH8) are included in the extension of LargeRDFBench. 
 
 
 Further advanced queries features can be found [here](http://goo.gl/eeW5W0 ) and discussed in the LargeRDFBench paper. The mean triple pattern selectivities along with complete details, for all of the LargeRDFBench queries can be found [here](https://docs.google.com/document/d/1mFSgq4YzsMmpfRC0TsvaddJbW506BqAo7omY2XibF2Y/edit?usp=sharing ).
